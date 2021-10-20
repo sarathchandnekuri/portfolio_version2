@@ -1,27 +1,30 @@
 import React, {useEffect } from 'react';
-import vp1 from '../images/vp1.jpg';
-import vp2 from '../images/vp2.jpg';
-import vp3 from '../images/vp3.jpg';
-import covaclofi from '../images/covac-lofi.svg';
-import covaclofiw from '../images/covac-lofi-w.PNG';
+import rp1 from '../images/rp1.jpg';
+import rp2 from '../images/rp2.jpg';
+import rp3 from '../images/rp3.jpg';
+import bakhifi from '../icons/bakhifi.svg';
+import baklofiw from '../images/baklofiw.PNG';
 import link from '../icons/link.svg';
-import covachifi from '../icons/covachifi.svg';
-import covacm1 from '../images/covacm-1.svg';
-import covacm2 from '../images/covacm2.svg';
-import covacm3 from '../images/covacm3.svg';
+import bakhifia from '../icons/bakhifia.svg';
+import bakm1 from '../icons/bakm1.svg';
+import bakm2 from '../icons/bakm2.svg';
+import bakm3 from '../icons/bakm3.svg';
+import bakl3 from '../icons/bakl3.svg';
+import miaDeck from '../docs/Restaurant Case study.pdf';
 import mom from '../images/mom.png';
 import ak from '../images/ak.png';
 import { Link } from 'react-router-dom';
 import covac from '../images/covac-thumbnail.png';
 import rogalik from '../images/rogalik-thumbnail.png';
 import mia from '../images/mia-thumbnail.png';
-import phone from '../icons/phone.svg';
+import phone2 from '../icons/phone2.svg';
 import gsap from 'gsap';
 import ScrollTrigger from "gsap/ScrollTrigger";
 import CursorFollower from '../components/cursorFollower';
 import {motion} from 'framer-motion';
 
-function Project1() {
+
+function Project3() {
     
     
 
@@ -94,8 +97,8 @@ function Project1() {
      
     return (
         <motion.div
-        initial={{opacity:0}}
         animate={{opacity:1}}
+        initial={{opacity:0}}
         transition={{ duration: 1 }}
         exit={{opacity:0}}
          className="homer">
@@ -105,7 +108,7 @@ function Project1() {
             <div className="p1"></div>
             <div className="p1-cover-image">
                 <div className="cover-bg">
-                    <img src={phone} alt="" />
+                    <img src={phone2} alt="" />
                     <div className="heading"> 
                         <div className="headingflex">
                         <p> Ca<span className="backtext">s</span>e&nbsp;</p><p>S<span className="backtext">t</span>udy                                
@@ -113,8 +116,8 @@ function Project1() {
                         </div>
                         
                         <h1 className="main-header">
-                            <span>Vaccination </span>
-                            <span>Booking </span>
+                            <span>Mia’s </span>
+                            <span>Restaurant </span>
                             <span>App </span>
                         </h1>
                     </div>
@@ -153,8 +156,7 @@ function Project1() {
                         </span>
                         
                         <h2>The Product</h2>
-                        <p>CoVac is an Indian web portal for Covid-19 vaccination Slot booking. The organization helps people to book a slot for vaccination with multiple filter like dosage, age, cost, and vaccine. CoVac’s primary target users include college students, young and old adults who wish to take a vaccination shot from nearby in order to save from COVID-19.
-                        </p>
+                        <p>Mia’s Restaurant is a regional restaurant located in Hyderabad. Mia’s Restaurant strives to deliver healthy and Tasty food, Biryani is their speciality. Mia’s Restaurant targets customers like students who wants to order multiple orders with multiple coupon codes in same order. </p>
                     </div>
                     <div className="pc1-sec rmt-5">
                         <span className="p-icon">
@@ -179,7 +181,7 @@ function Project1() {
 
                         </span>
                         <h2>My Role & Responsibilities</h2>
-                        <p>UX designer, leading the app and responsive website design from conception to delivery. My responsibilities are Conducting interviews, paper and digital wireframing, low and high-fidelity prototyping, conducting usability studies, accounting for accessibility, iterating on designs, determining information architecture, and responsive design.</p>
+                        <p>UX designer, designing an app for Mia’s Restaurant from conception to delivery. My responsibilities are Conducting interviews, paper and digital wireframing, low and high-fidelity prototyping, conducting usability studies, accounting for accessibility, iterating on designs, determining information architecture, and responsive design.</p>
                     </div>
                 </div>
                 
@@ -197,7 +199,7 @@ function Project1() {
                     </svg>
                         </span>
                     <h2>The Problem</h2>
-                    <p>Many users facing issues while booking a vaccination slot in India due to various reasons like inaccuracy in slot availability, filtering redirecting within website. The website doesn’t compatible with screen-readers.
+                    <p>Students who wants to order multiple orders with multiple coupon codes to save money.
                     </p>
                     </div>
                 
@@ -211,8 +213,7 @@ function Project1() {
                         </svg>
                     </span>
                     <h2>The Goal</h2>
-                    <p>Design an app with seamless vaccination slot booking experience and in a more accessible way to make it easy for every type of user.
-                    </p>
+                    <p>Design an app for Mia’s Restaurant that allows users to easily order and can add to bag multiple times.                    </p>
                 </div>
                 
                 </div>
@@ -246,61 +247,35 @@ function Project1() {
                     </span>
                     <h2>User Research Summary</h2>
                     <p className="rwidth100" style={{marginTop:"2rem", textAlign:"center", width:"80%"}}>
-                    I conducted a user interview, which I then turned into empathy maps to better understand the target user and their needs. Most interview participants reported that the portal is redirecting within website, felt irritated that the slot availability is inconsistent, not receiving OTP’s to the given number in OTP page. The feedback received through research made it very clear that users are facing a lot of issues and can be made their experience seamless if they had an easy-to-use tool by addressing the above issues.
-                    </p>
+                    I conducted interviews and created empathy maps to understand the users I’m designing for and their needs. A primary user group identified through research was students and adults who eats weekly once from their favorite restaurant. This user group confirmed initial assumptions about Mia’s Restaurant customers, but research also revealed that time was not the only factor limiting users from cooking at home/hostels. Other user problems included obligations, interests, or challenges that make it difficult to get groceries for cooking or go to restaurants in-person due to traffic.</p>
                     </div>
                     
                 </div>
 
                 <div className="pc1" style={{flexDirection:"column", alignItems:"center"}}>
                     <h2>User Persona</h2>
-                    <div className="personas">
+                    <div className="personas" style={{justifyContent:"center"}}>
                     <div className="persona-conts">
                     <div style={{fontSize:"5rem",fontFamily: 'Ephesis', position:"absolute", fontWeight:"bold"}}>“</div>
                         
                     <h4 style={{marginTop:"5rem"}}>
-                    To Be a responsible citizen by getting vaccinated.
+                    I prefer ordering food to avoid travelling and to enjoy meal at hostel
                     </h4>
                     <div className="persona-space">
                         <div className="p-details">
                             <img src={ak} alt="ak" />
                             <div className="details">
                                 <ul style={{listStyle:"none"}}>
-                                    <li><span style={{fontWeight:"bold"}}>Name:</span> &nbsp; AK</li>
-                                    <li><span style={{fontWeight:"bold"}}>Age:</span>&nbsp; 26</li>
-                                    <li><span style={{fontWeight:"bold"}}>Hometown:</span>&nbsp; Vishakapatnam</li>
-                                    <li><span style={{fontWeight:"bold"}}>Occupation:</span>&nbsp; Working Professional</li>
-                                </ul>
-                            </div>
-                            
-                        </div>
-                        <h4 style={{color:"#ea4335", marginTop:"1rem"}}>Problem Statement:</h4>
-                        <p>AK is a working professional,  Who needs a fast way to book a vaccination slot for her and for her parents from the office because she wants to save time as she works tirelessly.</p>
-
-                    </div>  
-
-                    </div>
-
-                    <div className="persona-conts">
-                    <div style={{fontSize:"5rem",fontFamily: 'Ephesis', position:"absolute", fontWeight:"bold"}}>“</div>
-                        <h4 style={{marginTop:"5rem"}}>
-                        Vaccination is the only way to get rid of the Covid-19
-                        </h4>
-                        <div className="persona-space">
-                        <div className="p-details">
-                            <img src={mom} alt="mom" />
-                            <div className="details">
-                                <ul style={{listStyle:"none"}}>
-                                    <li><span style={{fontWeight:"bold"}}>Name:</span> &nbsp; Sudha</li>
-                                    <li><span style={{fontWeight:"bold"}}>Age:</span>&nbsp; 45</li>
+                                    <li><span style={{fontWeight:"bold"}}>Name:</span> &nbsp; Jayadeep</li>
+                                    <li><span style={{fontWeight:"bold"}}>Age:</span>&nbsp; 22</li>
                                     <li><span style={{fontWeight:"bold"}}>Hometown:</span>&nbsp; Vijayawada</li>
-                                    <li><span style={{fontWeight:"bold"}}>Occupation:</span>&nbsp; House Wife</li>
+                                    <li><span style={{fontWeight:"bold"}}>Occupation:</span>&nbsp; Student</li>
                                 </ul>
                             </div>
                             
                         </div>
                         <h4 style={{color:"#ea4335", marginTop:"1rem"}}>Problem Statement:</h4>
-                        <p>Sudha is a housewife who needs an easy and trusted way to book a vaccination slot near her home and wants a guide on diet because she can vaccinate, and she can eat without any worries.</p>
+                        <p>Jayadeep is a Student who needs easy access to multiple ordering options because they want to order for his friends as well.</p>
 
                     </div>  
 
@@ -316,7 +291,8 @@ function Project1() {
                 <div className="p-header h-2">
                     <h2 style={{textAlign:"center"}}>Starting the design</h2>
                     <ul>
-                        <li>Digital Wireframe</li>
+                        <li>Paper Wireframes</li>
+                        <li>Digital Wireframes</li>
                         <li>Low-Fidelity Prototype</li>
                         <li>Usability Studies</li>
                     </ul>
@@ -326,11 +302,11 @@ function Project1() {
                 <div className="lo-fi mt-5">
                     <div className="lfp-bg">
                         <h2 className="mt-5"> Paper Wireframes</h2>
-                        <p className="mt-2" style={{textAlign:"center", width:"80%"}}>The wireframes for home screen of with 5 different versions, keeping the user pain points about navigation, key feature in mind. </p>
+                        <p className="mt-2" style={{textAlign:"center", width:"80%"}}>Taking the time to draft iterations of each screen of the app on paper ensured that the elements that made it to digital wireframes would be well-suited to address user pain points. For the home screen, I prioritized a Recent Order to help users save time. </p>
                         <div className="pw-images" style={{display:"flex", flexDirection:"row", margin:"2rem"}}>
-                            <img src={vp1} alt=""paper-wireframe/>
-                            <img src={vp2} alt=""paper-wireframe/>
-                            <img src={vp3} alt=""paper-wireframe/>
+                            <img src={rp1} alt=""paper-wireframe/>
+                            <img src={rp2} alt=""paper-wireframe/>
+                            <img src={rp3} alt=""paper-wireframe/>
                         </div>
                     </div>
                     
@@ -339,18 +315,18 @@ function Project1() {
 
                 <div className="lo-fi mt-5">
                     <h2>Digital Wireframes</h2>
-                    <p className="mt-2" style={{textAlign:"center", width:"80%"}}>After ideating and drafting some paper wireframes, I created the initial designs for the CoVac app. These designs focused on delivering a smooth experience to users to help book a vaccination slot.</p>
-                    <img className="lo-fi-img mt-2" src={covaclofi} alt="Lo-fi-Mockup"/>
+                    <p className="mt-2" style={{textAlign:"center", width:"80%"}}>As the initial design phase continued, I made sure to base screen designs on feedback and findings from the user research</p>
+                    <img className="lo-fi-img mt-2" src={bakhifi} alt="Lo-fi-Mockup"/>
                 </div>
                 
                 <div className="lo-fi mt-5">
                     <div className="lfp-bg">
                         <h2 className="mt-5"> Low-Fidelity Prototype</h2>
-                        <p className="mt-2" style={{textAlign:"center", width:"80%"}}>To prepare for usability testing, I created a low-fidelity prototype that connected the user flow of searching a slot, selecting a slot and booking it.</p>
-                        <img className="mt-2 lofi-pimg" src={covaclofiw} alt="Lo-fi-Mockup"/>
+                        <p className="mt-2" style={{textAlign:"center", width:"80%"}}>Using the completed set of digital wireframes, I created a low-fidelity prototype. The primary user flow I connected was ordering a recent order, so the prototype could be used in a usability study. </p>
+                        <img className="mt-2 lofi-pimg" src={baklofiw} alt="Lo-fi-Prototype"/>
                         <div className="m53" style={{display:"flex", flexDirection:"row", margin:"5rem"}}>
                             <img  style={{width:"18px", height:"auto", marginRight:"6px"}} src={link} alt="link-icon" />
-                            <a target="_blank" href="https://xd.adobe.com/view/e9f3a8d6-b8fd-44a2-a117-4df2fc0564ce-bca0/?fullscreen&hints=off" rel="noreferrer">CoVac's low-fidelity prototype</a>
+                            <a style={{textDecoration:"none"}} target="_blank" href="https://www.figma.com/file/sI7DXZYBG4yE52GgBNH7fE/Food-ordering-App?node-id=0%3A1" rel="noreferrer">Mia's low-fidelity prototype</a>
                         </div>
                     </div>
                     
@@ -468,8 +444,10 @@ function Project1() {
                             </svg>
                             </span>
                             
-                            <h3>Buttons</h3>
-                            <p style={{width:"220px"}}>People find difficult between Call-To-Action button and Toggle button</p>
+                            <h3>Filter</h3>
+                            <p style={{width:"220px"}}>User wants to filter food by veg and 
+non-veg
+</p>
                         </div>
                         <div className="upt persona-cont" style={{alignItems:"flex-start"}}>
                         <span className="p-icon">
@@ -481,9 +459,10 @@ function Project1() {
                             </svg>
                             </span>
                             
-                            <h3>Drop-Down</h3>
+                            <h3>Category</h3>
                             
-                            <p style={{width:"220px"}}>Since many people are not familiar with drop-down menus </p>
+                            <p style={{width:"220px"}}>Users need an easy to way to find 
+categories </p>
                         </div>
                         <div className="upt persona-cont" style={{alignItems:"flex-start"}}>
                         <span className="p-icon">
@@ -495,8 +474,8 @@ function Project1() {
                             </svg>
                             </span>
                             
-                            <h3>Slot Availability</h3>
-                            <p style={{width:"220px"}}>People preferred clear indications of when slot is available</p>
+                            <h3>Location</h3>
+                            <p style={{width:"220px"}}>User wants to set location quickly</p>
                         </div>
 
                     </div>
@@ -513,28 +492,28 @@ function Project1() {
 
                 <div className="lo-fi mt-5">
                     <h2>Mockups</h2>
-                    <p className="mt-2" style={{textAlign:"center", width:"80%"}}>Based on the insights from the usability studies, I applied design changes like providing an adding light background for toggle button to differentiate between CTA button and toggle button.</p>
+                    <p className="mt-2" style={{textAlign:"center", width:"80%"}}>Early designs made difficult to locate Your Recent Order, but after the usability studies, I replaced the position and changed the font size from 14pt to 18pt and font weight from medium to bold. I also added Toggle to filter based on Vegan.</p>
                     <div className="usability">
                         <div className="us-b-a">
                             <p className="mt-2" style={{marginLeft:"-32px", fontWeight:"600", fontSize:"0.9rem"}}>Before Usability Study</p>
-                            <img src={covaclofi} alt="Lo-fi-Mockup"/>
+                            <img src={bakhifi} alt="Lo-fi-Mockup"/>
                         </div>
                         <div className="us-b-a">
                             <p className="mt-2" style={{marginLeft:"-32px", fontWeight:"600", fontSize:"0.9rem"}}>After Usability Study</p>
-                            <img src={covachifi} alt="Hi-fi-Mockup"/>
+                            <img src={bakhifia} alt="Hi-fi-Mockup"/>
                         </div>
 
                     </div>
                     
-                    <p className="mt-5" style={{textAlign:"center", width:"80%"}}>Additional design changes included adding all the filter options as toggle buttons instead of drop down menus, and added a card to provide a clear indication for the dates on which slots are available. </p>
+                    <p className="mt-5" style={{textAlign:"center", width:"80%"}}>During second usability study users wanted to know more about the delivery guy, not just the name so I added a profile, star rating and number of deliveries. And users confused between the timer of Add Now button and expected time. So I changed the font weight and made Add now button as Secondary CTA.</p>
                     <div className="usability">
                         <div className="us-b-a">
                             <p className="mt-2" style={{marginLeft:"-32px", fontWeight:"600", fontSize:"0.9rem"}}>Before Usability Study</p>
-                            <img src={covaclofi} alt="Lo-fi-Mockup"/>
+                            <img src={bakl3} alt="Lo-fi-Mockup"/>
                         </div>
                         <div className="us-b-a">
                             <p className="mt-2" style={{marginLeft:"-32px", fontWeight:"600", fontSize:"0.9rem"}}>After Usability Study</p>
-                            <img src={covachifi} alt="Hi-fi-Mockup"/>
+                            <img src={bakm3} alt="Hi-fi-Mockup"/>
                         </div>
 
                     </div>
@@ -544,14 +523,14 @@ function Project1() {
                 <div className="lo-fi mt-5">
                     <h2>Mobile Mockups</h2>
                     <div className="mockups mt-2">
-                        <img src={covachifi} alt="Hi-fi-Mockup"/>
-                        <img src={covacm1} alt="Hi-fi-Mockup"/>
-                        <img src={covacm2} alt="Hi-fi-Mockup"/>
-                        <img src={covacm3} alt="Hi-fi-Mockup"/>
+                        <img src={bakhifia} alt="Hi-fi-Mockup"/>
+                        <img src={bakm1} alt="Hi-fi-Mockup"/>
+                        <img src={bakm2} alt="Hi-fi-Mockup"/>
+                        <img src={bakm3} alt="Hi-fi-Mockup"/>
                     </div>
                     <div className="m53" style={{display:"flex", flexDirection:"row", margin:"5rem"}}>
                             <img style={{width:"18px", height:"auto", marginRight:"6px"}} src={link} alt="link-icon" />
-                            <a target="_blank" href="https://xd.adobe.com/view/75d45d38-1063-47fa-83fe-50d55a1c73c4-2087/screen/ff370e1b-cf51-44b1-90ec-2a903ad61091?fullscreen&hints=off" rel="noreferrer">CoVac's High-fidelity prototype</a>
+                            <a target="_blank" href="https://www.figma.com/file/sI7DXZYBG4yE52GgBNH7fE/Food-ordering-App?node-id=231%3A1322" rel="noreferrer">Mia's High-fidelity prototype</a>
                     </div>
                 </div>
 
@@ -568,7 +547,7 @@ function Project1() {
                             </g>
                             </svg>
                             </span>
-                            <p style={{width:"220px"}}>Clear labels for interactive elements that can be read by screen readers.</p>
+                            <p style={{width:"220px"}}>Used icons that are accessible to help make navigation easier.</p>
                         </div>
                         <div className="upt persona-cont" style={{alignItems:"flex-start"}}>
                             <span className="p-icon">
@@ -579,7 +558,7 @@ function Project1() {
                             </g>
                             </svg>
                             </span>
-                            <p style={{width:"220px"}}>Initial focus of the home screen on Search slots help define the primary task or action for the user.</p>
+                            <p style={{width:"220px"}}>Provided access to users who are vision impaired through adding alt text to images for screen readers.</p>
                         </div>
                         <div className="upt persona-cont" style={{alignItems:"flex-start"}}>
                         <span className="p-icon">
@@ -590,7 +569,7 @@ function Project1() {
                         </g>
                         </svg>
                         </span>
-                            <p style={{width:"220px"}}>Added 15 languages and, including users who rely on assistive technology. Added features like getting notified to WhatsApp.</p>
+                            <p style={{width:"220px"}}>Used detailed imagery view during card payment for easy understanding of payment.</p>
                         </div>
 
                     </div>
@@ -626,7 +605,7 @@ function Project1() {
                         </svg>
                         </span>     
                             <h3>Impact</h3>
-                            <p style={{width:"360px", marginTop:"2rem"}}>Users shared that the app made slot booking seem like a smooth experience. One quote from peer feedback was that “I tried to book a slot through The CoVac app, and it was a seamless experience."</p>
+                            <p style={{width:"360px", marginTop:"2rem"}}>The app makes users feel like Mia’s Restaurant really thinks about how to meet their needs. One quote from peer feedback: “The app interface is very easy to operate and the app looks very good and colourful. It is pleasant to order from this app.”</p>
                         </div>
                         <div className="upt persona-cont" style={{alignItems:"flex-start"}}>
                         <span className="p-icon">
@@ -643,7 +622,7 @@ function Project1() {
                         
                         </span>
                             <h3>What I learned</h3>
-                            <p style={{width:"360px", marginTop:"2rem"}}>I learned that even though the problem I was trying to solve was a big one, diligently going through each step of the design process and aligning with specific user needs helped me come up with solutions that were both feasible and useful. </p>
+                            <p style={{width:"360px", marginTop:"2rem"}}>While designing the Mia’s Restaurant app, I learned that the first ideas for the app are only the beginning of the process. Usability studies and peer feedback influenced each iteration of the app’s designs. </p>
                         </div>
 
                     </div>
@@ -662,8 +641,7 @@ function Project1() {
                             </g>
                             </svg>
                             </span>
-                            <p style={{width:"240px"}}>Conduct follow-up usability testing on the app and responsive website
-    </p>
+                            <p style={{width:"240px"}}>Conduct another round of usability studies to validate whether the pain points users experienced have been effectively addressed.    </p>
                         </div>
                         <div className="upt persona-cont" style={{alignItems:"flex-start"}}>
                         <span className="p-icon">
@@ -674,7 +652,7 @@ function Project1() {
                             </g>
                             </svg>
                             </span>
-                            <p style={{width:"240px"}}>Identify any additional areas of need and ideate on new features</p>
+                            <p style={{width:"240px"}}>Conduct more user research to determine any new areas of need.</p>
                         </div>
 
                     </div>
@@ -682,18 +660,17 @@ function Project1() {
             </div>
         
             <div className="deck-container">
-                <button className="deck-btn">Pitch Deck</button>
+                <a href={miaDeck} className="deck-btn">Pitch Deck</a>
             </div>
 
             <div className="other-projects-container">
                 <h2 style={{textAlign:"center"}} >Other Projects</h2>
                 <div className="other-projects">
-                {/* <div className="project op">
+                <div className="project op">
                     <Link style={{cursor:"none"}} to="/">
-                        <div className="pitch">THIS PAGE IS UNDER CONSTRUCTION,<br/> MEANWHILE LOOK AT <br/>PITCH DECK</div>
                         <img className="project-image second-p" src={rogalik} alt="" />
                     </Link>
-                </div> */}
+                </div>
 
                 <div className="project op">
                     <Link style={{cursor:"none"}} to="/">
@@ -711,4 +688,4 @@ function Project1() {
     
 }
  
-export default Project1;
+export default Project3;

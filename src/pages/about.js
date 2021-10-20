@@ -1,9 +1,20 @@
-import React from "react";
-import SC from '../images/scimg.jpg'
+import React,{useEffect} from "react";
+import SC from '../images/scimg.jpg';
+import CursorFollower from '../components/cursorFollower';
+import {motion,useAnimation} from 'framer-motion';
+
 
 function About() {
+
     return ( 
-        <div className="about-container">
+        <motion.div
+        animate={{opacity:1}}
+        initial={{opacity:0}}
+        transition={{ duration: 1 }}
+        exit={{opacity:0}}
+         className="about-container">
+            <div className="transition-yellow"></div>
+            {/* <CursorFollower/> */}
             <div className="about-text">
                 <h2>Nice to Meet you!</h2>
                 <p style={{marginTop:"2rem"}}>Hello, I am Sarath Chand, graduated and specialized in Electronics.</p>
@@ -13,7 +24,7 @@ function About() {
             </div>
 
             <img className="my-image" src={SC} alt="MyImage"/>
-        </div>
+        </motion.div>
      );
 }
 
