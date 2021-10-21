@@ -172,7 +172,8 @@ li{
   cursor: pointer;
 }
 
-#Subtraction_9{
+
+.sub9{
   transform:translate(4197.595px, 4390.5px) rotate(0deg);
   transform-origin: center;
   transform-box: fill-box;
@@ -182,19 +183,26 @@ li{
   transform-origin: center;
   transform-box: fill-box;
 }
-#Subtraction_6{
+.sub6{
   transform:translate(4312px, 4453px) rotate(0deg);
   transform-origin: center;
   transform-box: fill-box;
 }
 
-.logoC:hover ~ #Subtraction_9,
-.logoC:hover ~ #Subtraction_6{
-  animation: logoRot 2s forwards;
+.sub9Rot{animation: sub9 2s forwards;}
+.sub10Rot{animation: sub10 2s forwards;}
+.sub6Rot{animation: sub6 2s forwards;}
+@keyframes sub9 {
+  0%{transform: translate(4197.595px, 4390.5px) rotate(0deg);}
+  100%{transform: translate(4197.595px, 4390.5px) rotate(360deg);}
 }
-@keyframes logRot {
-  0%{transform: rotate(0deg);}
-  100%{transform: rotate(90deg);}
+@keyframes sub10 {
+  0%{transform: translate(4197.595px, 4453px) rotate(180deg);}
+  100%{transform: translate(4197.595px, 4453px) rotate(540deg);}
+}
+@keyframes sub6 {
+  0%{transform: translate(4312px, 4453px) rotate(0deg);}
+  100%{transform: translate(4312px, 4453px) rotate(360deg);}
 }
 
 
@@ -992,6 +1000,7 @@ body.bluebg {
 
 .about-container {
   margin: 3rem auto;
+  margin-bottom: 0 !important;
   display: flex;
   max-width: 1024px;
   flex-direction: row;

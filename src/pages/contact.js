@@ -11,9 +11,6 @@ function Contact(){
 
     useEffect(()=>{
 
-        
-        
-
         const nameInputC = document.querySelector(".nameInput");
         const emailInputC = document.querySelector(".emailInput");
         const messageInputC = document.querySelector(".messageInput");
@@ -89,8 +86,7 @@ function Contact(){
                 { x: -306, y: -80 },
                 { x: -303, y: -238 },
                 { x: -52, y: -380 }]
-    };
-            
+    };  
 
     function takeOff() {
         if(window.screen.width > 780){
@@ -131,32 +127,12 @@ function Contact(){
         }, 7000)
     }
 
-    // initial={{opacity:0}}
-    //     animate={{opacity:1}}
-    //     transition={{ duration: 1 }}
-    //     exit={{opacity:0}}
-
-
-    const controls = useAnimation();
-    useEffect(() => {
-        controls.start("hidden");
-    }, [controls]);
-
-    const variants = {
-        visible: {
-          "transform": "translateY(100%)"
-        },
-        hidden: {
-          "transform": "translateY(0%)"
-        }
-      };
-
     return(
         <motion.div
-        animate={{opacity:1}}
-        initial={{opacity:0}}
+        animate={{opacity:1,  translateY:"0px"}}
+        initial={{opacity:0, translateY:"50px"}}
         transition={{ duration: 1 }}
-        exit={{opacity:0}}>
+        exit={{opacity:0, translateY:"50px"}}>
             <div
         
         className="contact-page">

@@ -8,10 +8,10 @@ function About() {
 
     return ( 
         <motion.div
-        animate={{opacity:1}}
-        initial={{opacity:0}}
+        animate={{opacity:1,  translateY:"0px"}}
+        initial={{opacity:0, translateY:"50px"}}
         transition={{ duration: 1 }}
-        exit={{opacity:0}}
+        exit={{opacity:0, translateY:"50px"}}
          className="about-container">
             <div className="transition-yellow"></div>
             {/* <CursorFollower/> */}

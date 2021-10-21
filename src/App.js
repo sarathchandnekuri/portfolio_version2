@@ -33,21 +33,21 @@ function App() {
                 loading ? (<Preloader loading={loading} />)
 
                 :
-(
-                <div>
+        
+                (<div>
                 <CursorFollower/>
                 <NavBar/>
-                <AnimatePresence exitBeforeEnter>
-                    <Switch location={location} key={location.pathname}>
-                        <Route exact path = "/" component={Home}/>
-                        <Route exact path = "/about" component={About}/>
-                        <Route exact path = "/resume" component={Resume}/>
-                        <Route exact path = "/contact" component={Contact}/>
-                        <Route exact path = "/project1" component={Project1} />
-                        <Route exact path = "/project2" component={Project2} />
-                        <Route exact path = "/project3" component={Project3} />
-                    </Switch>
-                </AnimatePresence>   
+                    <AnimatePresence exitBeforeEnter initial={false} >
+                        <Switch location={location} key={location.pathname}>
+                            <Route exact path = "/" component={Home}/>
+                            <Route exact path = "/about" component={About}/>
+                            <Route exact path = "/resume" component={Resume}/>
+                            <Route exact path = "/contact" component={Contact}/>
+                            <Route exact path = "/project1" component={Project1} />
+                            <Route exact path = "/project2" component={Project2} />
+                            <Route exact path = "/project3" component={Project3} />
+                        </Switch>
+                    </AnimatePresence>   
                 <GoToTop/>
                 </div>)
             }

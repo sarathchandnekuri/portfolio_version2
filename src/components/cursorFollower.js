@@ -43,7 +43,6 @@ function CursorFollower() {
             });
         });
 
-        
 
         if(job){
             job.addEventListener("mouseenter", function(){
@@ -57,7 +56,7 @@ function CursorFollower() {
             });
         }
         
-    },[])
+    },[]);
 
     return(
         <div className="cursor-follower">
