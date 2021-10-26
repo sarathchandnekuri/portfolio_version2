@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.b47e9846.chunk.css",
-    "main.js": "/static/js/main.6648e285.chunk.js",
-    "main.js.map": "/static/js/main.6648e285.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.3e3840ca.js",
-    "runtime-main.js.map": "/static/js/runtime-main.3e3840ca.js.map",
-    "static/js/2.7f11157e.chunk.js": "/static/js/2.7f11157e.chunk.js",
-    "static/js/2.7f11157e.chunk.js.map": "/static/js/2.7f11157e.chunk.js.map",
-    "static/js/3.e8e3bade.chunk.js": "/static/js/3.e8e3bade.chunk.js",
-    "static/js/3.e8e3bade.chunk.js.map": "/static/js/3.e8e3bade.chunk.js.map",
+    "main.css": "/static/css/main.8c02caf3.chunk.css",
+    "main.js": "/static/js/main.bf72a04b.chunk.js",
+    "main.js.map": "/static/js/main.bf72a04b.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.b01ee273.js",
+    "runtime-main.js.map": "/static/js/runtime-main.b01ee273.js.map",
+    "static/js/2.4e7c0fef.chunk.js": "/static/js/2.4e7c0fef.chunk.js",
+    "static/js/2.4e7c0fef.chunk.js.map": "/static/js/2.4e7c0fef.chunk.js.map",
+    "static/js/3.81525396.chunk.js": "/static/js/3.81525396.chunk.js",
+    "static/js/3.81525396.chunk.js.map": "/static/js/3.81525396.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.b47e9846.chunk.css.map": "/static/css/main.b47e9846.chunk.css.map",
-    "static/js/2.7f11157e.chunk.js.LICENSE.txt": "/static/js/2.7f11157e.chunk.js.LICENSE.txt",
+    "static/css/main.8c02caf3.chunk.css.map": "/static/css/main.8c02caf3.chunk.css.map",
+    "static/js/2.4e7c0fef.chunk.js.LICENSE.txt": "/static/js/2.4e7c0fef.chunk.js.LICENSE.txt",
+    "static/media/styles.css": "/static/media/cursor.cdcd8ddc.svg",
     "static/media/Restaurant Case study.a1ab1131.pdf": "/static/media/Restaurant Case study.a1ab1131.pdf",
     "static/media/ak.83b2ada9.png": "/static/media/ak.83b2ada9.png",
     "static/media/bakhifi.832d6a2d.svg": "/static/media/bakhifi.832d6a2d.svg",
@@ -28,7 +29,6 @@
     "static/media/covacm-1.e4fb5b28.svg": "/static/media/covacm-1.e4fb5b28.svg",
     "static/media/covacm2.f9641f6c.svg": "/static/media/covacm2.f9641f6c.svg",
     "static/media/covacm3.23f12529.svg": "/static/media/covacm3.23f12529.svg",
-    "static/media/styles.css": "/static/media/cursor.cdcd8ddc.svg",
     "static/media/down.a842e204.svg": "/static/media/down.a842e204.svg",
     "static/media/flight.f48848d8.svg": "/static/media/flight.f48848d8.svg",
     "static/media/goto.55b8713a.svg": "/static/media/goto.55b8713a.svg",
@@ -36,10 +36,10 @@
     "static/media/hireme.13f3d036.svg": "/static/media/hireme.13f3d036.svg",
     "static/media/incog.31f76016.svg": "/static/media/incog.31f76016.svg",
     "static/media/link.59aad2cf.svg": "/static/media/link.59aad2cf.svg",
-    "static/media/logo.7e70cfa1.svg": "/static/media/logo.7e70cfa1.svg",
     "static/media/mia-thumbnail.b0b5d822.png": "/static/media/mia-thumbnail.b0b5d822.png",
     "static/media/mom.b63d5192.png": "/static/media/mom.b63d5192.png",
     "static/media/mypic.9e4f92c5.png": "/static/media/mypic.9e4f92c5.png",
+    "static/media/no_internet.1a79eb13.svg": "/static/media/no_internet.1a79eb13.svg",
     "static/media/phone.bf9d3df6.svg": "/static/media/phone.bf9d3df6.svg",
     "static/media/phone2.9d9eb7e0.svg": "/static/media/phone2.9d9eb7e0.svg",
     "static/media/rogalik-thumbnail.14c40ab6.png": "/static/media/rogalik-thumbnail.14c40ab6.png",
@@ -53,9 +53,9 @@
     "static/media/vp3.15325013.jpg": "/static/media/vp3.15325013.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.3e3840ca.js",
-    "static/js/2.7f11157e.chunk.js",
-    "static/css/main.b47e9846.chunk.css",
-    "static/js/main.6648e285.chunk.js"
+    "static/js/runtime-main.b01ee273.js",
+    "static/js/2.4e7c0fef.chunk.js",
+    "static/css/main.8c02caf3.chunk.css",
+    "static/js/main.bf72a04b.chunk.js"
   ]
 }
