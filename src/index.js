@@ -1,18 +1,26 @@
-import React,{useState} from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Network from './components/network';
+import ScrollToTop from 'react-router-scroll-top'
 
 import {BrowserRouter} from 'react-router-dom';
+
 
 //import Preloader from "./pages/preloader";
 
 
-
+window.addEventListener("offline", function(){
+    <Network/>
+});
 ReactDOM.render(
+  
   <BrowserRouter>
-      <App/>
+      <ScrollToTop>
+        <App/>
+      </ScrollToTop>
   </BrowserRouter>
   ,
   document.getElementById('root')

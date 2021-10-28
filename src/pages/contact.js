@@ -5,7 +5,8 @@ import mypic from '../icons/mypic.png';
 import gsap from 'gsap';
 import MotionPathPlugin from 'gsap/MotionPathPlugin';
 import emailjs from 'emailjs-com';
-import {motion, useAnimation} from 'framer-motion';
+// import CursorFollower from '../components/cursorFollower';
+import {motion} from 'framer-motion';
 
 function Contact(){
 
@@ -128,16 +129,13 @@ function Contact(){
     }
 
     return(
+        <div>
         <motion.div
         animate={{opacity:1,  translateY:"0px"}}
         initial={{opacity:0, translateY:"50px"}}
         transition={{ duration: 1 }}
         exit={{opacity:0, translateY:"50px"}}>
-            <div
-        
-        className="contact-page">
-            {/* <CursorFollower/> */}
-            <div className="transition-yellow"></div>
+        <div className="contact-page">
             <div className="incog">
                 <img className="incogImg" src={incog} alt="" />
                 <img className="mypic" src={mypic} alt="" />
@@ -186,6 +184,8 @@ function Contact(){
             
             </div>
         </motion.div>
+        </div>
+        
         
         );
 

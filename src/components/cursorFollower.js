@@ -55,8 +55,15 @@ function CursorFollower() {
                 hireSpan.style.opacity = 0;
             });
         }
+
+        document.addEventListener("mouseleave", function(){
+            cursorFollower.style.display = "none";
+        })
+        document.addEventListener("mouseenter", function(){
+            cursorFollower.style.display = "block";
+        })
         
-    },[]);
+    });
 
     return(
         <div className="cursor-follower">

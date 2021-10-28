@@ -12,18 +12,18 @@ import covacm3 from '../images/covacm3.svg';
 import mom from '../images/mom.png';
 import ak from '../images/ak.png';
 import { Link } from 'react-router-dom';
-import covac from '../images/covac-thumbnail.png';
-import rogalik from '../images/rogalik-thumbnail.png';
 import mia from '../images/mia-thumbnail.png';
+import rogalik from '../images/rogalik-thumbnail.png';
+import covacDeck from '../docs/Vaccine Case study Deck.pdf';
 import phone from '../icons/phone.svg';
 import gsap from 'gsap';
 import ScrollTrigger from "gsap/ScrollTrigger";
-import CursorFollower from '../components/cursorFollower';
 import {motion} from 'framer-motion';
+import CursorFollower from '../components/cursorFollower';
 
 function Project1() {
     
-    
+    //window.onunload = function(){ window.scrollTo(0,0); }
 
     useEffect( () => {
         gsap.registerPlugin(ScrollTrigger);
@@ -39,67 +39,36 @@ function Project1() {
             scrollTrigger:{
                 trigger:".lo-fi-img",
                 scrub:true,
-                start:"10% 80%",
+                start:"20% 80%",
                 end:"+=254",
         }, height:"80vh", marginLeft:"60px" })
 
-        ScrollTrigger.create({
-            trigger:".h-1",
-            start:"top 50%",
-            end:"=+360",
-            markers:true,
-            onEnter:() => gsap.to("body", {backgroundColor:"#122d34", color:"#FCE264", overwrite:'auto'}),
-            onLeave:() => gsap.to("body", {backgroundColor:"#f8feff", color:"#122d34", overwrite:'auto'}),
+        gsap.utils.toArray(".h-1, .h-2, .h-3, .h-4").forEach(head =>{
+            ScrollTrigger.create({
+                trigger:head,
+                start:"top 50%",
+                end:"bottom 50%",
+                onEnter:() => gsap.to("body", {backgroundColor:"#122d34", color:"#FCE264", overwrite:'auto'}),
+                onLeave:() => gsap.to("body", {backgroundColor:"#f8feff", color:"#122d34", overwrite:'auto'}),
+    
+                onEnterBack:() => gsap.to("body", {backgroundColor:"#122d34", color:"#FCE264", overwrite:'auto'}),
+                onLeaveBack:() => gsap.to("body", {backgroundColor:"#f8feff", color:"#122d34", overwrite:'auto'})
+            });
+        })
 
-            onEnterBack:() => gsap.to("body", {backgroundColor:"#122d34", color:"#FCE264", overwrite:'auto'}),
-            onLeaveBack:() => gsap.to("body", {backgroundColor:"#f8feff", color:"#122d34", overwrite:'auto'})
-        });
-        ScrollTrigger.create({
-            trigger:".h-2",
-            start:"top 50%",
-            end:"=+360",
-            markers:true,
-            onEnter:() => gsap.to("body", {backgroundColor:"#122d34", color:"#FCE264", overwrite:'auto'}),
-            onLeave:() => gsap.to("body", {backgroundColor:"#f8feff", color:"#122d34", overwrite:'auto'}),
-
-            onEnterBack:() => gsap.to("body", {backgroundColor:"#122d34", color:"#FCE264", overwrite:'auto'}),
-            onLeaveBack:() => gsap.to("body", {backgroundColor:"#f8feff", color:"#122d34", overwrite:'auto'})
-        });
-        ScrollTrigger.create({
-            trigger:".h-3",
-            start:"top 50%",
-            end:"100vh",
-            markers:true,
-            onEnter:() => gsap.to("body", {backgroundColor:"#122d34", color:"#FCE264", overwrite:'auto'}),
-            onLeave:() => gsap.to("body", {backgroundColor:"#f8feff", color:"#122d34", overwrite:'auto'}),
-
-            onEnterBack:() => gsap.to("body", {backgroundColor:"#122d34", color:"#FCE264", overwrite:'auto'}),
-            onLeaveBack:() => gsap.to("body", {backgroundColor:"#f8feff", color:"#122d34", overwrite:'auto'})
-        });
-        ScrollTrigger.create({
-            trigger:".h-4",
-            start:"top 50%",
-            end:"100vh",
-            markers:true,
-            onEnter:() => gsap.to("body", {backgroundColor:"#122d34", color:"#FCE264", overwrite:'auto'}),
-            onLeave:() => gsap.to("body", {backgroundColor:"#f8feff", color:"#122d34", overwrite:'auto'}),
-
-            onEnterBack:() => gsap.to("body", {backgroundColor:"#122d34", color:"#FCE264", overwrite:'auto'}),
-            onLeaveBack:() => gsap.to("body", {backgroundColor:"#f8feff", color:"#122d34", overwrite:'auto'})
-        });
     }, [])
 
 
     
      
     return (
+        <div><CursorFollower/>
         <motion.div
         initial={{opacity:0}}
         animate={{opacity:1}}
         transition={{ duration: 1 }}
         exit={{opacity:0}}
          className="homer">
-            {/* <CursorFollower/> */}
             
             <div className="project-1">
             <div className="p1"></div>
@@ -224,8 +193,6 @@ function Project1() {
                         <li>User research</li>
                         <li>Personas</li>
                         <li>Problem statements</li>
-                        <li>Competitive audit</li>
-                        <li>Ideation</li>
                     </ul>
                 </div>
                 
@@ -316,7 +283,8 @@ function Project1() {
                 <div className="p-header h-2">
                     <h2 style={{textAlign:"center"}}>Starting the design</h2>
                     <ul>
-                        <li>Digital Wireframe</li>
+                        <li>Paper Wireframes</li>
+                        <li>Digital Wireframes</li>
                         <li>Low-Fidelity Prototype</li>
                         <li>Usability Studies</li>
                     </ul>
@@ -517,11 +485,11 @@ function Project1() {
                     <div className="usability">
                         <div className="us-b-a">
                             <p className="mt-2" style={{marginLeft:"-32px", fontWeight:"600", fontSize:"0.9rem"}}>Before Usability Study</p>
-                            <img src={covaclofi} alt="Lo-fi-Mockup"/>
+                            <img style={{height: "60vh"}} src={covaclofi} alt="Lo-fi-Mockup"/>
                         </div>
                         <div className="us-b-a">
                             <p className="mt-2" style={{marginLeft:"-32px", fontWeight:"600", fontSize:"0.9rem"}}>After Usability Study</p>
-                            <img src={covachifi} alt="Hi-fi-Mockup"/>
+                            <img style={{height: "60vh"}} src={covachifi} alt="Hi-fi-Mockup"/>
                         </div>
 
                     </div>
@@ -530,11 +498,11 @@ function Project1() {
                     <div className="usability">
                         <div className="us-b-a">
                             <p className="mt-2" style={{marginLeft:"-32px", fontWeight:"600", fontSize:"0.9rem"}}>Before Usability Study</p>
-                            <img src={covaclofi} alt="Lo-fi-Mockup"/>
+                            <img style={{height: "60vh"}} src={covaclofi} alt="Lo-fi-Mockup"/>
                         </div>
                         <div className="us-b-a">
                             <p className="mt-2" style={{marginLeft:"-32px", fontWeight:"600", fontSize:"0.9rem"}}>After Usability Study</p>
-                            <img src={covachifi} alt="Hi-fi-Mockup"/>
+                            <img style={{height: "60vh"}} src={covachifi} alt="Hi-fi-Mockup"/>
                         </div>
 
                     </div>
@@ -682,21 +650,20 @@ function Project1() {
             </div>
         
             <div className="deck-container">
-                <button className="deck-btn">Pitch Deck</button>
+                <a href={covacDeck} target="_blank" rel="noreferrer" className="deck-btn">Pitch Deck</a>
             </div>
 
             <div className="other-projects-container">
                 <h2 style={{textAlign:"center"}} >Other Projects</h2>
                 <div className="other-projects">
-                {/* <div className="project op">
-                    <Link style={{cursor:"none"}} to="/">
-                        <div className="pitch">THIS PAGE IS UNDER CONSTRUCTION,<br/> MEANWHILE LOOK AT <br/>PITCH DECK</div>
+                <div className="project op">
+                    <Link style={{cursor:"none"}} to="/rogalik-bakery">
                         <img className="project-image second-p" src={rogalik} alt="" />
                     </Link>
-                </div> */}
+                </div>
 
                 <div className="project op">
-                    <Link style={{cursor:"none"}} to="/">
+                    <Link style={{cursor:"none"}} to="/mia-restaurant">
                         <img className="project-image third-p" src={mia} alt="" />
                     </Link>
                 </div>
@@ -707,6 +674,8 @@ function Project1() {
             </div>
 
         </motion.div>
+        </div>
+        
         );
     
 }

@@ -3,8 +3,6 @@ import React from 'react';
 
 function Preloader (){
 
-    
-
     return (
         <div className="pre-container">
             <div className="pre-bg"></div>

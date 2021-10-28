@@ -10,32 +10,35 @@ import Project2 from "./pages/project2";
 import Project3 from "./pages/project3";
 import Contact from "./pages/contact";
 import Preloader from "./pages/preloader";
-import CursorFollower from "./components/cursorFollower";
+// import CursorFollower from "./components/cursorFollower";
 import { AnimatePresence } from 'framer-motion';
+import Error from "./components/error";
+// import Network from "./components/network";
 
 
 function App() {
     
     const location = useLocation();
-    const [loading, setLoading] = useState(false);
+    // const [loading, setLoading] = useState(false);
 
-    useEffect(()=>{
-        setLoading(true)
-        setTimeout(()=>{
-            setLoading(false)
-        },4000)
-    },[])
+    // useEffect(()=>{
+    //     setLoading(true)
+    //     setTimeout(()=>{
+    //         setLoading(false)
+    //     },4000)
+    // },[])
 
     return (  
 
         <div className="container">
-            {
+            {/* {
                 loading ? (<Preloader loading={loading} />)
 
                 :
         
-                (<div>
-                <CursorFollower/>
+                (<div> */}
+                
+                {/* <CursorFollower/> */}
                 <NavBar/>
                     <AnimatePresence exitBeforeEnter initial={false} >
                         <Switch location={location} key={location.pathname}>
@@ -43,16 +46,17 @@ function App() {
                             <Route exact path = "/about" component={About}/>
                             <Route exact path = "/resume" component={Resume}/>
                             <Route exact path = "/contact" component={Contact}/>
-                            <Route exact path = "/project1" component={Project1} />
-                            <Route exact path = "/project2" component={Project2} />
-                            <Route exact path = "/project3" component={Project3} />
+                            <Route exact path = "/covac" component={Project1} />
+                            <Route exact path = "/rogalik-bakery" component={Project2} />
+                            <Route exact path = "/mia-restaurant" component={Project3} />
+                            <Route component={Error} />
                         </Switch>
                     </AnimatePresence>   
                 <GoToTop/>
-                </div>)
-            }
+                {/* </div>) */}
+             {/* } */}
             
-        </div>
+         </div>
 
         
     );

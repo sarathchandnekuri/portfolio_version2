@@ -11,17 +11,15 @@ import bakm2 from '../icons/bakm2.svg';
 import bakm3 from '../icons/bakm3.svg';
 import bakl3 from '../icons/bakl3.svg';
 import miaDeck from '../docs/Restaurant Case study.pdf';
-import mom from '../images/mom.png';
 import ak from '../images/ak.png';
 import { Link } from 'react-router-dom';
-import covac from '../images/covac-thumbnail.png';
 import rogalik from '../images/rogalik-thumbnail.png';
-import mia from '../images/mia-thumbnail.png';
+import covac from '../images/covac-thumbnail.png';
 import phone2 from '../icons/phone2.svg';
 import gsap from 'gsap';
 import ScrollTrigger from "gsap/ScrollTrigger";
-import CursorFollower from '../components/cursorFollower';
 import {motion} from 'framer-motion';
+import CursorFollower from '../components/cursorFollower';
 
 
 function Project3() {
@@ -46,63 +44,33 @@ function Project3() {
                 end:"+=254",
         }, height:"80vh", marginLeft:"60px" })
 
-        ScrollTrigger.create({
-            trigger:".h-1",
-            start:"top 50%",
-            end:"=+360",
-            markers:true,
-            onEnter:() => gsap.to("body", {backgroundColor:"#122d34", color:"#FCE264", overwrite:'auto'}),
-            onLeave:() => gsap.to("body", {backgroundColor:"#f8feff", color:"#122d34", overwrite:'auto'}),
-
-            onEnterBack:() => gsap.to("body", {backgroundColor:"#122d34", color:"#FCE264", overwrite:'auto'}),
-            onLeaveBack:() => gsap.to("body", {backgroundColor:"#f8feff", color:"#122d34", overwrite:'auto'})
+        gsap.utils.toArray(".h-1, .h-2, .h-3, .h-4").forEach(head =>{
+            ScrollTrigger.create({
+                trigger:head,
+                start:"top 50%",
+                end:"bottom 50%",
+                onEnter:() => gsap.to("body", {backgroundColor:"#122d34", color:"#FCE264", overwrite:'auto'}),
+                onLeave:() => gsap.to("body", {backgroundColor:"#f8feff", color:"#122d34", overwrite:'auto'}),
+    
+                onEnterBack:() => gsap.to("body", {backgroundColor:"#122d34", color:"#FCE264", overwrite:'auto'}),
+                onLeaveBack:() => gsap.to("body", {backgroundColor:"#f8feff", color:"#122d34", overwrite:'auto'})
+            });
         });
-        ScrollTrigger.create({
-            trigger:".h-2",
-            start:"top 50%",
-            end:"=+360",
-            markers:true,
-            onEnter:() => gsap.to("body", {backgroundColor:"#122d34", color:"#FCE264", overwrite:'auto'}),
-            onLeave:() => gsap.to("body", {backgroundColor:"#f8feff", color:"#122d34", overwrite:'auto'}),
 
-            onEnterBack:() => gsap.to("body", {backgroundColor:"#122d34", color:"#FCE264", overwrite:'auto'}),
-            onLeaveBack:() => gsap.to("body", {backgroundColor:"#f8feff", color:"#122d34", overwrite:'auto'})
-        });
-        ScrollTrigger.create({
-            trigger:".h-3",
-            start:"top 50%",
-            end:"100vh",
-            markers:true,
-            onEnter:() => gsap.to("body", {backgroundColor:"#122d34", color:"#FCE264", overwrite:'auto'}),
-            onLeave:() => gsap.to("body", {backgroundColor:"#f8feff", color:"#122d34", overwrite:'auto'}),
-
-            onEnterBack:() => gsap.to("body", {backgroundColor:"#122d34", color:"#FCE264", overwrite:'auto'}),
-            onLeaveBack:() => gsap.to("body", {backgroundColor:"#f8feff", color:"#122d34", overwrite:'auto'})
-        });
-        ScrollTrigger.create({
-            trigger:".h-4",
-            start:"top 50%",
-            end:"100vh",
-            markers:true,
-            onEnter:() => gsap.to("body", {backgroundColor:"#122d34", color:"#FCE264", overwrite:'auto'}),
-            onLeave:() => gsap.to("body", {backgroundColor:"#f8feff", color:"#122d34", overwrite:'auto'}),
-
-            onEnterBack:() => gsap.to("body", {backgroundColor:"#122d34", color:"#FCE264", overwrite:'auto'}),
-            onLeaveBack:() => gsap.to("body", {backgroundColor:"#f8feff", color:"#122d34", overwrite:'auto'})
-        });
     }, [])
 
 
     
      
     return (
+        <div><CursorFollower/>
         <motion.div
         animate={{opacity:1}}
         initial={{opacity:0}}
         transition={{ duration: 1 }}
         exit={{opacity:0}}
          className="homer">
-            {/* <CursorFollower/> */}
+            
             
             <div className="project-1">
             <div className="p1"></div>
@@ -225,8 +193,6 @@ function Project3() {
                         <li>User research</li>
                         <li>Personas</li>
                         <li>Problem statements</li>
-                        <li>Competitive audit</li>
-                        <li>Ideation</li>
                     </ul>
                 </div>
                 
@@ -494,26 +460,26 @@ categories </p>
                     <h2>Mockups</h2>
                     <p className="mt-2" style={{textAlign:"center", width:"80%"}}>Early designs made difficult to locate Your Recent Order, but after the usability studies, I replaced the position and changed the font size from 14pt to 18pt and font weight from medium to bold. I also added Toggle to filter based on Vegan.</p>
                     <div className="usability">
-                        <div className="us-b-a">
+                        <div className="flexed">
                             <p className="mt-2" style={{marginLeft:"-32px", fontWeight:"600", fontSize:"0.9rem"}}>Before Usability Study</p>
-                            <img src={bakhifi} alt="Lo-fi-Mockup"/>
+                            <img style={{height: "60vh"}} src={bakhifi} alt="Lo-fi-Mockup"/>
                         </div>
-                        <div className="us-b-a">
+                        <div className="flexed">
                             <p className="mt-2" style={{marginLeft:"-32px", fontWeight:"600", fontSize:"0.9rem"}}>After Usability Study</p>
-                            <img src={bakhifia} alt="Hi-fi-Mockup"/>
+                            <img style={{height: "60vh"}} src={bakhifia} alt="Hi-fi-Mockup"/>
                         </div>
 
                     </div>
                     
                     <p className="mt-5" style={{textAlign:"center", width:"80%"}}>During second usability study users wanted to know more about the delivery guy, not just the name so I added a profile, star rating and number of deliveries. And users confused between the timer of Add Now button and expected time. So I changed the font weight and made Add now button as Secondary CTA.</p>
                     <div className="usability">
-                        <div className="us-b-a">
+                        <div className="flexed">
                             <p className="mt-2" style={{marginLeft:"-32px", fontWeight:"600", fontSize:"0.9rem"}}>Before Usability Study</p>
-                            <img src={bakl3} alt="Lo-fi-Mockup"/>
+                            <img style={{height: "60vh"}} src={bakl3} alt="Lo-fi-Mockup"/>
                         </div>
-                        <div className="us-b-a">
+                        <div className="flexed">
                             <p className="mt-2" style={{marginLeft:"-32px", fontWeight:"600", fontSize:"0.9rem"}}>After Usability Study</p>
-                            <img src={bakm3} alt="Hi-fi-Mockup"/>
+                            <img style={{height: "60vh"}} src={bakm3} alt="Hi-fi-Mockup"/>
                         </div>
 
                     </div>
@@ -660,21 +626,21 @@ categories </p>
             </div>
         
             <div className="deck-container">
-                <a href={miaDeck} className="deck-btn">Pitch Deck</a>
+                <a href={miaDeck} target="_blank" rel="noreferrer" className="deck-btn">Pitch Deck</a>
             </div>
 
             <div className="other-projects-container">
                 <h2 style={{textAlign:"center"}} >Other Projects</h2>
                 <div className="other-projects">
                 <div className="project op">
-                    <Link style={{cursor:"none"}} to="/">
-                        <img className="project-image second-p" src={rogalik} alt="" />
+                    <Link style={{cursor:"none"}} to="/covac">
+                        <img className="project-image second-p" src={covac} alt="" />
                     </Link>
                 </div>
 
                 <div className="project op">
-                    <Link style={{cursor:"none"}} to="/">
-                        <img className="project-image third-p" src={mia} alt="" />
+                    <Link style={{cursor:"none"}} to="/rogalik-bakery">
+                        <img className="project-image third-p" src={rogalik} alt="" />
                     </Link>
                 </div>
                 </div>
@@ -684,6 +650,8 @@ categories </p>
             </div>
 
         </motion.div>
+        </div>
+       
         );
     
 }

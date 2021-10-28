@@ -7,136 +7,17 @@ import { Link } from "react-router-dom";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import MotionPathPlugin from "gsap/MotionPathPlugin";
-import * as dat from 'dat.gui';
-import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader';
 import CursorFollower from "../components/cursorFollower";
 import Contact from "./contact";
-import {motion,useAnimation} from 'framer-motion';
+import {motion} from 'framer-motion';
+import ThreeCanvas from "../components/threeCanvas";
+
+
 
 
 function Home() {
 
-    // window.onload = function(){
-
-        
-
-    //     // const textureLoader = new three.TextureLoader()
-    //     // const normalTexture = textureLoader.load("../models/puz-normalmap.png")
-
-    //     // const gui = new dat.GUI();
-    //     // const scene = new three.Scene();
-    //     // const canvas = document.querySelector(".webgl");
-    //     // // const geometry = new three.SphereBufferGeometry( 0.8,60,60 );
-    //     // // Materials
-
-        
-    //     // const material = new three.MeshStandardMaterial()
-    //     // material.color = new three.Color(0xffffff)
-    //     // material.normalMap = normalTexture;
-    //     // // material.normalMap = texture;
-
-    //     // const gltfLoader = new GLTFLoader()
-    //     // gltfLoader.load('../models/logo.glb', 
-    //     // function(glb){
-    //     //     console.log(glb)
-
-    //     //     const logo = glb.scene;
-    //     //     logo.scale.set(0.1,0.1,0.1);
-    //     //     scene.add( logo );
-            
-    //     // }, function(xhr){
-    //     //     console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
-    //     // }, function(error){
-    //     //     console.error("error",error);
-    //     // })
-
-
-
-    //     // // Mesh
-    //     // // const sphere = new three.Mesh(geometry,material)
-    //     // // scene.add(sphere)
-        
-
-    //     // const greenLight = new three.PointLight(0x0000ff, 1)
-    //     // greenLight.position.set(-1,0.5,1.5)
-    //     // scene.add(greenLight)
-
-    //     // const pointlighthelper = new three.PointLightHelper(greenLight,1)
-    //     // scene.add(pointlighthelper)
-        
-    //     // const color = new three.Color(0xfdf0b1);
-    //     // const intensity = 1;
-    //     // const light = new three.AmbientLight(color, intensity);
-    //     // scene.add(light);
-
-        
-    //     // /** Sizes               */
-    //     // const sizes = {width: window.innerWidth, height: window.innerHeight}
-        
-    //     // window.addEventListener('resize', () =>
-    //     // {
-    //     //     // Update sizes
-    //     //     sizes.width = window.innerWidth
-    //     //     sizes.height = window.innerHeight
-        
-    //     //     // Update camera
-    //     //     camera.aspect = sizes.width / sizes.height
-    //     //     camera.updateProjectionMatrix()
-        
-    //     //     // Update renderer
-    //     //     renderer.setSize(sizes.width, sizes.height)
-    //     //     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
-    //     // })
-        
-    //     // /**
-    //     //  * Camera
-    //     //  */
-    //     // // Base camera
-    //     // const camera = new three.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 100)
-    //     // camera.position.set(0,0,2)
-    //     // scene.add(camera)
-        
-    //     // // Controls
-    //     // // const controls = new OrbitControls(camera, canvas)
-    //     // // controls.enableDamping = true
-        
-    //     // /** Renderer            */
-
-    //     // const renderer = new three.WebGLRenderer({
-    //     //     canvas: canvas,
-    //     //     alpha:true,
-    //     //     antialias:true
-    //     // })
-    //     // renderer.setSize(sizes.width, sizes.height)
-    //     // renderer.setPixelRatio(window.devicePixelRatio)
-    //     // renderer.outputEncoding = three.sRGBEncoding;
-        
-    //     // /**       Animate         */
-        
-    //     // const clock = new three.Clock()
-        
-    //     // const tick = () =>
-    //     // {   //const elapsedTime = clock.getElapsedTime()
-        
-    //     //     // Update objects
-    //     //     // logo.rotation.y = .5 * elapsedTime
-        
-    //     //     // Update Orbital Controls
-    //     //     // controls.update()
-        
-    //     //     // Render
-    //     //     renderer.render(scene, camera)
-    //     //     // Call tick again on the next frame
-    //     //     window.requestAnimationFrame(tick)
-    //     // }
-        
-    //     // tick()
-
-
-       
-    // }
     
-
     useEffect( () => {
 
         if(document.getElementById("go-down")){
@@ -193,16 +74,7 @@ function Home() {
                 trigger:".contact-pager",
                 start:"top 10%",
                 toggleActions:"play none none reset"
-        },duration:0.5, opacity:1})
-
-        gsap.set( ".footer",{ 
-            scrollTrigger:{
-                trigger:".footer",
-                start:"top top",
-                pin:true,
-                pinSpacing:false,
-                toggleActions:"play none none reset"
-        }, duration:0.5})
+        },duration:0.5, opacity:1, pointerEvents:"all"})
 
 
 
@@ -218,65 +90,29 @@ function Home() {
 
     },[])
 
-    // const controls = useAnimation();
-    // // useEffect(() => {
-    // //     controls.start("hidden");
-    // // }, [controls]);
-
-    // const variants = {
-    //     visible: {
-    //       "transform": "translateY(100%)"
-    //     },
-    //     hidden: {
-    //       "transform": "translateY(0%)"
-    //     }
-    //   };
 
     return (
+        <div><CursorFollower/>
         <motion.div
-        animate={{opacity:1, translateY:"0px"}}
-        initial={{opacity:0, translateY:"50px"}}
+        animate={{opacity:1,  translateY:"0px"}}
+        initial={{opacity:0,  translateY:"50px"}}
         transition={{ duration: 1 }}
-        exit={{opacity:0, translateY:"50px"}}
-        // animate={controls}
-        // variants={variants}
-        // initial="visible"
-        // transition={{ duration: 0.5 }}
-        // exit="visible"
-        // sx={{
-        //     overflow: "hidden",
-        //     position: "absolute",
-        //     display: "inline-block",
-        //     height: "100vh",
-        //     background:"red",
-        //     width:"100vw",
-        //     "&::before": {
-        //       content: '""',
-        //       background: "red",
-        //       position: "absolute",
-        //       width: "100vw",
-        //       height: "100vh",
-        //       left: 0,
-        //       top: 0,
-        //       zIndex: 220,
-        //       transform: "var(transform)"
-        //     }
-        //   }}>
-            ><div
-        
-
-        className="homeC">
-            {/* <CursorFollower/> */}
-           <div className="transition-yellow"></div>
+        exit={{opacity:0,  translateY:"50px"}}>
+                
+        <div className="homeC">
+            
             <div className="center">
-                {/* <canvas className="webgl"></canvas> */}
+
+                {/* <ThreeCanvas/> */}
+
+
                 <h1 className="main-header">
                     <span>Hello, </span>
                     <span>I'm </span>
                     <span>Sarath </span>
                     <span>Chand!</span>
                 </h1>
-                    
+            
                 <p style={{color:"#122d34"}} className="para">I am Passionate about
                     <div className="cube-container">
                         <div className="cube">
@@ -298,20 +134,20 @@ function Home() {
 
 <div className="works">
     <div className="project p-1">
-        <Link style={{cursor:"none"}} to="/project1">
+        <Link style={{cursor:"none"}} to="/covac">
             <img className="project-image first-p" src={covac} alt="" />
         </Link>
     </div>
     
     <div className="project p-2">
-        <Link style={{cursor:"none"}} to="/project2">
-            <div className="pitch">THIS PAGE IS UNDER CONSTRUCTION,<br/> MEANWHILE LOOK AT <br/>PITCH DECK</div>
+        <Link style={{cursor:"none"}} to="/rogalik-bakery">
+            {/* <div className="pitch">THIS PAGE IS UNDER CONSTRUCTION,<br/> MEANWHILE LOOK AT <br/>PITCH DECK</div> */}
             <img className="project-image second-p" src={rogalik} alt="" />
         </Link>
     </div>
 
     <div className="project p-3">
-        <Link style={{cursor:"none"}} to="/project3">
+        <Link style={{cursor:"none"}} to="/mia-restaurant">
             <img className="project-image third-p" src={mia} alt="" />
         </Link>
     </div>
@@ -336,6 +172,8 @@ function Home() {
                
         </div>
         </motion.div> 
+        </div>
+        
         
      );
 }

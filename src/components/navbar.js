@@ -1,6 +1,5 @@
 import React,{useEffect} from 'react';
-import logo from '../icons/logo.svg';
-import {Link} from 'react-router-dom';
+import {NavLink, Link} from 'react-router-dom';
 import pdf from '../docs/sarath_resume.pdf';
 import gsap from 'gsap';
 
@@ -98,22 +97,19 @@ function NavBar() {
                 <div className="menubar">
                     <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
                         <g id="menu-1" transform="translate(-125 -125)">
-                            <rect id="Rectangle_142" data-name="Rectangle 142" width="50" height="50" transform="translate(125 125)" fill="#f8feff"/>
                             <rect id="Rectangle_136" data-name="Rectangle 136" width="36" height="3" transform="translate(131.838 139.593)" fill="#122d34"/>
                             <rect id="Rectangle_137" data-name="Rectangle 137" width="36" height="3" transform="translate(131.838 148.593)" fill="#122d34"/>
                             <rect id="Rectangle_138" data-name="Rectangle 138" width="36" height="3" transform="translate(131.838 157.593)" fill="#122d34"/>
                         </g>
                     </svg>
-
-
                 </div>
 
 
                 <ul className="menu">
-                    <li><Link className="menu-bg active-menu work" to="/">Work</Link></li>
+                    <li><NavLink exact activeClassName="active-menu" className="menu-bg work" to="/">Work</NavLink></li>
                     <li><a className="menu-bg resume" href = {pdf} target = "_blank" rel="noreferrer" >Resume</a></li>
-                    <li><Link className="menu-bg contact" to="/contact">Contact</Link></li>
-                    <li><Link className="menu-bg about" to="/about">About Me</Link></li>
+                    <li><NavLink exact activeClassName="active-menu" className="menu-bg contact" to="/contact">Contact</NavLink></li>
+                    <li><NavLink exact activeClassName="active-menu" className="menu-bg about" to="/about">About Me</NavLink></li>
                 </ul>
             </div>
             

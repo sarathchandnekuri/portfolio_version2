@@ -1,28 +1,27 @@
 import React, {useEffect } from 'react';
-import vp1 from '../images/vp1.jpg';
-import vp2 from '../images/vp2.jpg';
-import vp3 from '../images/vp3.jpg';
-import covaclofi from '../images/covac-lofi.svg';
-import covaclofiw from '../images/covac-lofi-w.PNG';
+import bp1 from '../images/bp1.jpg';
+import bp2 from '../images/bp2.jpg';
+import bp3 from '../images/bp3.jpg';
+import bakaft1 from '../images/baakaft1.png';
+import bakbef2 from '../images/bakbef2.png';
+import bakbef1 from '../images/bakbef1.png';
+import bakaft2 from '../images/bakaft2.png';
+import roglofiw from '../images/roglofiw.PNG';
 import link from '../icons/link.svg';
-import covachifi from '../icons/covachifi.svg';
-import covacm1 from '../images/covacm-1.svg';
-import covacm2 from '../images/covacm2.svg';
-import covacm3 from '../images/covacm3.svg';
-import mom from '../images/mom.png';
-import ak from '../images/ak.png';
+import vinnu from '../images/vinnu.png';
 import { Link } from 'react-router-dom';
-import covac from '../images/covac-thumbnail.png';
-import rogalik from '../images/rogalik-thumbnail.png';
 import mia from '../images/mia-thumbnail.png';
-import phone from '../icons/phone.svg';
+import covac from '../images/covac-thumbnail.png';
+import rogalikDeck from '../docs/Bakery Case Study.pdf';
+import bakImg from '../images/bakImg.png';
 import gsap from 'gsap';
 import ScrollTrigger from "gsap/ScrollTrigger";
 import {motion} from 'framer-motion';
+import CursorFollower from '../components/cursorFollower';
+
 
 function Project2() {
-    
-    
+
 
     useEffect( () => {
         gsap.registerPlugin(ScrollTrigger);
@@ -37,74 +36,44 @@ function Project2() {
         gsap.to( ".lo-fi-img",{ 
             scrollTrigger:{
                 trigger:".lo-fi-img",
-                scrub:true,
                 start:"10% 80%",
+                scrub:true,
                 end:"+=254",
-        }, height:"80vh", marginLeft:"60px" })
+        }, width:"90vw", marginLeft:"0px" })
 
-        ScrollTrigger.create({
-            trigger:".h-1",
-            start:"top 50%",
-            end:"=+360",
-            markers:true,
-            onEnter:() => gsap.to("body", {backgroundColor:"#122d34", color:"#FCE264", overwrite:'auto'}),
-            onLeave:() => gsap.to("body", {backgroundColor:"#f8feff", color:"#122d34", overwrite:'auto'}),
-
-            onEnterBack:() => gsap.to("body", {backgroundColor:"#122d34", color:"#FCE264", overwrite:'auto'}),
-            onLeaveBack:() => gsap.to("body", {backgroundColor:"#f8feff", color:"#122d34", overwrite:'auto'})
-        });
-        ScrollTrigger.create({
-            trigger:".h-2",
-            start:"top 50%",
-            end:"=+360",
-            markers:true,
-            onEnter:() => gsap.to("body", {backgroundColor:"#122d34", color:"#FCE264", overwrite:'auto'}),
-            onLeave:() => gsap.to("body", {backgroundColor:"#f8feff", color:"#122d34", overwrite:'auto'}),
-
-            onEnterBack:() => gsap.to("body", {backgroundColor:"#122d34", color:"#FCE264", overwrite:'auto'}),
-            onLeaveBack:() => gsap.to("body", {backgroundColor:"#f8feff", color:"#122d34", overwrite:'auto'})
-        });
-        ScrollTrigger.create({
-            trigger:".h-3",
-            start:"top 50%",
-            end:"100vh",
-            markers:true,
-            onEnter:() => gsap.to("body", {backgroundColor:"#122d34", color:"#FCE264", overwrite:'auto'}),
-            onLeave:() => gsap.to("body", {backgroundColor:"#f8feff", color:"#122d34", overwrite:'auto'}),
-
-            onEnterBack:() => gsap.to("body", {backgroundColor:"#122d34", color:"#FCE264", overwrite:'auto'}),
-            onLeaveBack:() => gsap.to("body", {backgroundColor:"#f8feff", color:"#122d34", overwrite:'auto'})
-        });
-        ScrollTrigger.create({
-            trigger:".h-4",
-            start:"top 50%",
-            end:"100vh",
-            markers:true,
-            onEnter:() => gsap.to("body", {backgroundColor:"#122d34", color:"#FCE264", overwrite:'auto'}),
-            onLeave:() => gsap.to("body", {backgroundColor:"#f8feff", color:"#122d34", overwrite:'auto'}),
-
-            onEnterBack:() => gsap.to("body", {backgroundColor:"#122d34", color:"#FCE264", overwrite:'auto'}),
-            onLeaveBack:() => gsap.to("body", {backgroundColor:"#f8feff", color:"#122d34", overwrite:'auto'})
-        });
+        gsap.utils.toArray(".h-1, .h-2, .h-3, .h-4").forEach(head =>{
+            ScrollTrigger.create({
+                trigger:head,
+                start:"top 50%",
+                end:"bottom 50%",
+                onEnter:() => gsap.to("body", {backgroundColor:"#122d34", color:"#FCE264", overwrite:'auto'}),
+                onLeave:() => gsap.to("body", {backgroundColor:"#f8feff", color:"#122d34", overwrite:'auto'}),
+    
+                onEnterBack:() => gsap.to("body", {backgroundColor:"#122d34", color:"#FCE264", overwrite:'auto'}),
+                onLeaveBack:() => gsap.to("body", {backgroundColor:"#f8feff", color:"#122d34", overwrite:'auto'})
+            });
+        })
+        
     }, [])
 
 
     
      
     return (
+        <div><CursorFollower/>
         <motion.div
         animate={{opacity:1}}
         initial={{opacity:0}}
         transition={{ duration: 1 }}
         exit={{opacity:0}}
-         className="homer transition-yellow">
+         className="homer">
             {/* <cursorFollower/> */}
             
             <div className="project-1">
             <div className="p1"></div>
             <div className="p1-cover-image">
-                <div className="cover-bg">
-                    <img src={phone} alt="" />
+                <div className="cover-bg ">
+                    <img className="mt-180" src={bakImg} alt="" />
                     <div className="heading"> 
                         <div className="headingflex">
                         <p> Ca<span className="backtext">s</span>e&nbsp;</p><p>S<span className="backtext">t</span>udy                                
@@ -222,8 +191,6 @@ function Project2() {
                         <li>User research</li>
                         <li>Personas</li>
                         <li>Problem statements</li>
-                        <li>Competitive audit</li>
-                        <li>Ideation</li>
                     </ul>
                 </div>
                 
@@ -251,22 +218,21 @@ function Project2() {
 
                 <div className="pc1" style={{flexDirection:"column", alignItems:"center"}}>
                     <h2>User Persona</h2>
-                    <div className="personas">
+                    <div className="personas" style={{justifyContent:"center"}}>
                     <div className="persona-conts">
                     <div style={{fontSize:"5rem",fontFamily: 'Ephesis', position:"absolute", fontWeight:"bold"}}>“</div>
                         
                     <h4 style={{marginTop:"5rem"}}>
-                    To Be a responsible citizen by getting vaccinated.
-                    </h4>
+                    Special Moments are incomplete without cakes, customized cakes are fun</h4>
                     <div className="persona-space">
                         <div className="p-details">
-                            <img src={ak} alt="ak" />
+                            <img style={{transform:"scale(0.8)"}} src={vinnu} alt="ak" />
                             <div className="details">
                                 <ul style={{listStyle:"none"}}>
-                                    <li><span style={{fontWeight:"bold"}}>Name:</span> &nbsp; AK</li>
-                                    <li><span style={{fontWeight:"bold"}}>Age:</span>&nbsp; 26</li>
-                                    <li><span style={{fontWeight:"bold"}}>Hometown:</span>&nbsp; Vishakapatnam</li>
-                                    <li><span style={{fontWeight:"bold"}}>Occupation:</span>&nbsp; Working Professional</li>
+                                    <li><span style={{fontWeight:"bold"}}>Name:</span> &nbsp; Vineeth</li>
+                                    <li><span style={{fontWeight:"bold"}}>Age:</span>&nbsp; 24</li>
+                                    <li><span style={{fontWeight:"bold"}}>Hometown:</span>&nbsp; Hyderabad</li>
+                                    <li><span style={{fontWeight:"bold"}}>Occupation:</span>&nbsp; Silicon Engineer</li>
                                 </ul>
                             </div>
                             
@@ -288,6 +254,7 @@ function Project2() {
                 <div className="p-header h-2">
                     <h2 style={{textAlign:"center"}}>Starting the design</h2>
                     <ul>
+                        <li>Paper Wireframe</li>
                         <li>Digital Wireframe</li>
                         <li>Low-Fidelity Prototype</li>
                         <li>Usability Studies</li>
@@ -300,9 +267,9 @@ function Project2() {
                         <h2 className="mt-5"> Paper Wireframes</h2>
                         <p className="mt-2" style={{textAlign:"center", width:"80%"}}>Next, I sketched out paper wireframes for each screen in my website, keeping the user pain points about navigation, browsing, and customization flow in mind. </p>
                         <div className="pw-images" style={{display:"flex", flexDirection:"row", margin:"2rem"}}>
-                            <img src={vp1} alt=""paper-wireframe/>
-                            <img src={vp2} alt=""paper-wireframe/>
-                            <img src={vp3} alt=""paper-wireframe/>
+                            <img src={bp1} alt=""paper-wireframe/>
+                            <img src={bp2} alt=""paper-wireframe/>
+                            <img src={bp3} alt=""paper-wireframe/>
                         </div>
                     </div>
                     
@@ -312,17 +279,17 @@ function Project2() {
                 <div className="lo-fi mt-5">
                     <h2>Digital Wireframes</h2>
                     <p className="mt-2" style={{textAlign:"center", width:"80%"}}>Moving from paper to digital wireframes made it easy to understand how the redesign could help address user pain points and improve the user experience. </p>
-                    <img className="lo-fi-img mt-2" src={covaclofi} alt="Lo-fi-Mockup"/>
+                    <img className="lo-fi-img mt-2" src={bakImg} alt="Lo-fi-Mockup"/>
                 </div>
                 
                 <div className="lo-fi mt-5">
                     <div className="lfp-bg">
                         <h2 className="mt-5"> Low-Fidelity Prototype</h2>
                         <p className="mt-2" style={{textAlign:"center", width:"80%"}}>To create a low-fidelity prototype, I connected all of the screens involved in the primary user flow of adding a cake to the cart and checking out.</p>
-                        <img className="mt-2 lofi-pimg" src={covaclofiw} alt="Lo-fi-Mockup"/>
+                        <img className="mt-2 lofi-pimg" src={roglofiw} alt="Lo-fi-Mockup"/>
                         <div className="m53" style={{display:"flex", flexDirection:"row", margin:"5rem"}}>
                             <img  style={{width:"18px", height:"auto", marginRight:"6px"}} src={link} alt="link-icon" />
-                            <a target="_blank" href="https://xd.adobe.com/view/e9f3a8d6-b8fd-44a2-a117-4df2fc0564ce-bca0/?fullscreen&hints=off" rel="noreferrer">CoVac's low-fidelity prototype</a>
+                            <a target="_blank" href="https://xd.adobe.com/view/ddda0a1d-6364-4cce-bfaa-b9febdcaef28-8889/?fullscreen&hints=off" rel="noreferrer">CoVac's low-fidelity prototype</a>
                         </div>
                     </div>
                     
@@ -478,54 +445,46 @@ function Project2() {
                     <h2 style={{textAlign:"center"}}>Refine the design</h2>
                     <ul>
                         <li>Mockups</li>
-                        <li>High-fidelity Prototype</li>
+                        <li>Low-fidelity Prototype</li>
                         <li>Accessibility</li>
                     </ul>
                 </div>
 
                 <div className="lo-fi mt-5">
                     <h2>Mockups</h2>
-                    <p className="mt-2" style={{textAlign:"center", width:"80%"}}>Based on the insights from the usability studies, I applied design changes like providing an adding light background for toggle button to differentiate between CTA button and toggle button.</p>
-                    <div className="usability">
-                        <div className="us-b-a">
+                    <p className="mt-2" style={{textAlign:"center", width:"80%"}}>Based on the insights from the usability study, I made changes to improve the Customization flow. The changes I made was creating a card for each customization category and in there radio buttons for single feild and checkbox for multiple feilds weree added. This allowed users more freedom to choose customization option without going through a complicated process.</p>
+                    <div className="usability just">
+                        <div className="flexed">
                             <p className="mt-2" style={{marginLeft:"-32px", fontWeight:"600", fontSize:"0.9rem"}}>Before Usability Study</p>
-                            <img src={covaclofi} alt="Lo-fi-Mockup"/>
+                            <img className="desktoplofi" src={bakbef1} alt="Lo-fi-Mockup"/>
                         </div>
-                        <div className="us-b-a">
+                        <div className="flexed">
                             <p className="mt-2" style={{marginLeft:"-32px", fontWeight:"600", fontSize:"0.9rem"}}>After Usability Study</p>
-                            <img src={covachifi} alt="Hi-fi-Mockup"/>
+                            <img className="desktoplofi" src={bakaft1} alt="Hi-fi-Mockup"/>
                         </div>
 
                     </div>
                     
-                    <p className="mt-5" style={{textAlign:"center", width:"80%"}}>Additional design changes included adding all the filter options as toggle buttons instead of drop down menus, and added a card to provide a clear indication for the dates on which slots are available. </p>
-                    <div className="usability">
-                        <div className="us-b-a">
+                    <p className="mt-5" style={{textAlign:"center", width:"80%"}}>To make the preview screen even easier for users, I added back button to go homescreen and displayed weights that are available with color contrast. </p>
+                    <div className="usability just">
+                        <div className="flexed">
                             <p className="mt-2" style={{marginLeft:"-32px", fontWeight:"600", fontSize:"0.9rem"}}>Before Usability Study</p>
-                            <img src={covaclofi} alt="Lo-fi-Mockup"/>
+                            <img className="desktoplofi" src={bakbef2} alt="Lo-fi-Mockup"/>
                         </div>
-                        <div className="us-b-a">
+                        <div className="flexed">
                             <p className="mt-2" style={{marginLeft:"-32px", fontWeight:"600", fontSize:"0.9rem"}}>After Usability Study</p>
-                            <img src={covachifi} alt="Hi-fi-Mockup"/>
+                            <img className="desktoplofi" src={bakaft2} alt="Hi-fi-Mockup"/>
                         </div>
 
                     </div>
                 
-                </div>
-                
-                <div className="lo-fi mt-5">
-                    <h2>Mobile Mockups</h2>
-                    <div className="mockups mt-2">
-                        <img src={covachifi} alt="Hi-fi-Mockup"/>
-                        <img src={covacm1} alt="Hi-fi-Mockup"/>
-                        <img src={covacm2} alt="Hi-fi-Mockup"/>
-                        <img src={covacm3} alt="Hi-fi-Mockup"/>
-                    </div>
                     <div className="m53" style={{display:"flex", flexDirection:"row", margin:"5rem"}}>
                             <img style={{width:"18px", height:"auto", marginRight:"6px"}} src={link} alt="link-icon" />
-                            <a target="_blank" href="https://xd.adobe.com/view/75d45d38-1063-47fa-83fe-50d55a1c73c4-2087/screen/ff370e1b-cf51-44b1-90ec-2a903ad61091?fullscreen&hints=off" rel="noreferrer">CoVac's High-fidelity prototype</a>
+                            <a target="_blank" href="https://xd.adobe.com/view/5c14edec-774c-498a-a503-46671b57b8e6-0947/?fullscreen" rel="noreferrer">CoVac's High-fidelity prototype</a>
                     </div>
                 </div>
+                
+                
 
 
                 <div className="lo-fi mt-5">
@@ -654,20 +613,20 @@ function Project2() {
             </div>
         
             <div className="deck-container">
-                <button className="deck-btn">Pitch Deck</button>
+                <a href={rogalikDeck} target="_blank" rel="noreferrer" className="deck-btn">Pitch Deck</a>
             </div>
 
             <div className="other-projects-container">
                 <h2 style={{textAlign:"center"}} >Other Projects</h2>
                 <div className="other-projects">
                 <div className="project op">
-                    <Link style={{cursor:"none"}} to="/">
-                        <img className="project-image second-p" src={rogalik} alt="" />
+                    <Link style={{cursor:"none"}} to="/covac">
+                        <img className="project-image second-p" src={covac} alt="" />
                     </Link>
                 </div>
 
                 <div className="project op">
-                    <Link style={{cursor:"none"}} to="/">
+                    <Link style={{cursor:"none"}} to="/mia-restaurant">
                         <img className="project-image third-p" src={mia} alt="" />
                     </Link>
                 </div>
@@ -678,6 +637,8 @@ function Project2() {
             </div>
 
         </motion.div>
+        </div>
+        
         );
     
 }
