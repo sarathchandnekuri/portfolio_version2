@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.2e6b1c34.chunk.css",
-    "main.js": "/static/js/main.ef172402.chunk.js",
-    "main.js.map": "/static/js/main.ef172402.chunk.js.map",
+    "main.css": "/static/css/main.ad35d841.chunk.css",
+    "main.js": "/static/js/main.29cc50db.chunk.js",
+    "main.js.map": "/static/js/main.29cc50db.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.ca3b3268.js",
     "runtime-main.js.map": "/static/js/runtime-main.ca3b3268.js.map",
-    "static/js/2.e21cda18.chunk.js": "/static/js/2.e21cda18.chunk.js",
-    "static/js/2.e21cda18.chunk.js.map": "/static/js/2.e21cda18.chunk.js.map",
+    "static/js/2.ed1280df.chunk.js": "/static/js/2.ed1280df.chunk.js",
+    "static/js/2.ed1280df.chunk.js.map": "/static/js/2.ed1280df.chunk.js.map",
     "static/js/3.a806d0a5.chunk.js": "/static/js/3.a806d0a5.chunk.js",
     "static/js/3.a806d0a5.chunk.js.map": "/static/js/3.a806d0a5.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.2e6b1c34.chunk.css.map": "/static/css/main.2e6b1c34.chunk.css.map",
-    "static/js/2.e21cda18.chunk.js.LICENSE.txt": "/static/js/2.e21cda18.chunk.js.LICENSE.txt",
+    "static/css/main.ad35d841.chunk.css.map": "/static/css/main.ad35d841.chunk.css.map",
+    "static/js/2.ed1280df.chunk.js.LICENSE.txt": "/static/js/2.ed1280df.chunk.js.LICENSE.txt",
     "static/media/styles.css": "/static/media/cursor.cdcd8ddc.svg",
     "static/media/Bakery Case Study.2010ff17.pdf": "/static/media/Bakery Case Study.2010ff17.pdf",
     "static/media/Restaurant Case study.a1ab1131.pdf": "/static/media/Restaurant Case study.a1ab1131.pdf",
@@ -54,7 +54,7 @@
     "static/media/mypic.9e4f92c5.png": "/static/media/mypic.9e4f92c5.png",
     "static/media/no_internet.1a79eb13.svg": "/static/media/no_internet.1a79eb13.svg",
     "static/media/phone.bf9d3df6.svg": "/static/media/phone.bf9d3df6.svg",
-    "static/media/phone2.9d9eb7e0.svg": "/static/media/phone2.9d9eb7e0.svg",
+    "static/media/phone2.6c32c8fa.svg": "/static/media/phone2.6c32c8fa.svg",
     "static/media/pux.png_ambient.719a46dc.png": "/static/media/pux.png_ambient.719a46dc.png",
     "static/media/pux.png_specular.69533b1c.png": "/static/media/pux.png_specular.69533b1c.png",
     "static/media/pux.png_specularreal.265b3fd1.png": "/static/media/pux.png_specularreal.265b3fd1.png",
@@ -71,8 +71,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.ca3b3268.js",
-    "static/js/2.e21cda18.chunk.js",
-    "static/css/main.2e6b1c34.chunk.css",
-    "static/js/main.ef172402.chunk.js"
+    "static/js/2.ed1280df.chunk.js",
+    "static/css/main.ad35d841.chunk.css",
+    "static/js/main.29cc50db.chunk.js"
   ]
 }
