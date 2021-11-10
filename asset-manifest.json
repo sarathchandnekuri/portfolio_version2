@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.cde8723b.chunk.css",
-    "main.js": "/static/js/main.691ea65a.chunk.js",
-    "main.js.map": "/static/js/main.691ea65a.chunk.js.map",
+    "main.css": "/static/css/main.36b95931.chunk.css",
+    "main.js": "/static/js/main.c9c0750c.chunk.js",
+    "main.js.map": "/static/js/main.c9c0750c.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.ca3b3268.js",
     "runtime-main.js.map": "/static/js/runtime-main.ca3b3268.js.map",
-    "static/js/2.5a66d84f.chunk.js": "/static/js/2.5a66d84f.chunk.js",
-    "static/js/2.5a66d84f.chunk.js.map": "/static/js/2.5a66d84f.chunk.js.map",
+    "static/js/2.3dd727a1.chunk.js": "/static/js/2.3dd727a1.chunk.js",
+    "static/js/2.3dd727a1.chunk.js.map": "/static/js/2.3dd727a1.chunk.js.map",
     "static/js/3.a806d0a5.chunk.js": "/static/js/3.a806d0a5.chunk.js",
     "static/js/3.a806d0a5.chunk.js.map": "/static/js/3.a806d0a5.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.cde8723b.chunk.css.map": "/static/css/main.cde8723b.chunk.css.map",
-    "static/js/2.5a66d84f.chunk.js.LICENSE.txt": "/static/js/2.5a66d84f.chunk.js.LICENSE.txt",
+    "static/css/main.36b95931.chunk.css.map": "/static/css/main.36b95931.chunk.css.map",
+    "static/js/2.3dd727a1.chunk.js.LICENSE.txt": "/static/js/2.3dd727a1.chunk.js.LICENSE.txt",
     "static/media/styles.css": "/static/media/cursor.cdcd8ddc.svg",
     "static/media/Bakery Case Study.2010ff17.pdf": "/static/media/Bakery Case Study.2010ff17.pdf",
     "static/media/Restaurant Case study.a1ab1131.pdf": "/static/media/Restaurant Case study.a1ab1131.pdf",
@@ -71,8 +71,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.ca3b3268.js",
-    "static/js/2.5a66d84f.chunk.js",
-    "static/css/main.cde8723b.chunk.css",
-    "static/js/main.691ea65a.chunk.js"
+    "static/js/2.3dd727a1.chunk.js",
+    "static/css/main.36b95931.chunk.css",
+    "static/js/main.c9c0750c.chunk.js"
   ]
 }
