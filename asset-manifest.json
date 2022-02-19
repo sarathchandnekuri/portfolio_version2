@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.310f551b.chunk.css",
-    "main.js": "/static/js/main.72db9740.chunk.js",
-    "main.js.map": "/static/js/main.72db9740.chunk.js.map",
+    "main.js": "/static/js/main.1bb65172.chunk.js",
+    "main.js.map": "/static/js/main.1bb65172.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.0d2d0fbc.js",
     "runtime-main.js.map": "/static/js/runtime-main.0d2d0fbc.js.map",
     "static/js/2.f4193bc7.chunk.js": "/static/js/2.f4193bc7.chunk.js",
@@ -11,18 +11,12 @@
     "static/js/3.dd834ec8.chunk.js.map": "/static/js/3.dd834ec8.chunk.js.map",
     "index.html": "/index.html",
     "static/css/main.310f551b.chunk.css.map": "/static/css/main.310f551b.chunk.css.map",
-    "static/js/2.f4193bc7.chunk.js.LICENSE.txt": "/static/js/2.f4193bc7.chunk.js.LICENSE.txt",
-    "static/media/flight.f48848d8.svg": "/static/media/flight.f48848d8.svg",
-    "static/media/goto.55b8713a.svg": "/static/media/goto.55b8713a.svg",
-    "static/media/gototop.13d22ae1.svg": "/static/media/gototop.13d22ae1.svg",
-    "static/media/hireme.13f3d036.svg": "/static/media/hireme.13f3d036.svg",
-    "static/media/incog.31f76016.svg": "/static/media/incog.31f76016.svg",
-    "static/media/mypic.9e4f92c5.png": "/static/media/mypic.9e4f92c5.png"
+    "static/js/2.f4193bc7.chunk.js.LICENSE.txt": "/static/js/2.f4193bc7.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.0d2d0fbc.js",
     "static/js/2.f4193bc7.chunk.js",
     "static/css/main.310f551b.chunk.css",
-    "static/js/main.72db9740.chunk.js"
+    "static/js/main.1bb65172.chunk.js"
   ]
 }
