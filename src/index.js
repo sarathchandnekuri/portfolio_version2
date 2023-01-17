@@ -3,25 +3,16 @@ import ReactDOM from 'react-dom';
 import './styles.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Network from './components/network';
 import ScrollToTop from 'react-router-scroll-top'
+import {HashRouter} from 'react-router-dom';
 
-import {BrowserRouter} from 'react-router-dom';
-
-
-//import Preloader from "./pages/preloader";
-
-
-window.addEventListener("offline", function(){
-    <Network/>
-});
 ReactDOM.render(
   
-  <BrowserRouter>
+  <HashRouter>
       <ScrollToTop>
         <App/>
       </ScrollToTop>
-  </BrowserRouter>
+  </HashRouter>
   ,
   document.getElementById('root')
 );

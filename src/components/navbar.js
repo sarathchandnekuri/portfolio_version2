@@ -1,7 +1,8 @@
 import React,{useEffect} from 'react';
 import {NavLink, Link} from 'react-router-dom';
-import pdf from '../docs/sarath_resume.pdf';
 import gsap from 'gsap';
+import {CDN} from '../config';
+import { HashLink } from 'react-router-hash-link';
 
 
 function NavBar() {
@@ -23,30 +24,56 @@ function NavBar() {
             
             gsap.from(".work", { duration: 0.5, delay:0.5, opacity:0, y:80})
             gsap.from(".resume", { duration: 0.5, delay:0.7, opacity:0, y:80})
-            gsap.from(".contact", { duration: 0.5, delay:0.9, opacity:0, y:80})
-            gsap.from(".about", { duration: 0.5, delay:1.1, opacity:0, y:80})
+            gsap.from(".about", { duration: 0.5, delay:0.9, opacity:0, y:80})
+            gsap.from(".contact", { duration: 0.5, delay:1.1, opacity:0, y:80})
         })
 
-        const work = document.querySelector(".work");
-        const contact = document.querySelector(".contact");
+        const work = document.querySelector(".work"); 
         const about = document.querySelector(".about");
 
         work.addEventListener("click",function(){
-            work.classList.add("active-menu");
-            contact.classList.remove("active-menu");
+            work.classList.add("active-menu"); 
             about.classList.remove("active-menu");
+            if(window.screen.width < 1024){
+                setTimeout(function(){
+                    menu.classList.remove("slide");
+                    body.classList.toggle("stop-scrolling");
+                    document.getElementById("Rectangle_136").classList.toggle("r136");
+                    document.getElementById("Rectangle_137").classList.toggle("r137");
+                    document.getElementById("Rectangle_138").classList.toggle("r138");
+                },1000)
+                
+            }
         })
 
-        contact.addEventListener("click",function(){
-            work.classList.remove("active-menu");
-            contact.classList.add("active-menu");
-            about.classList.remove("active-menu");
+        const tease = document.querySelector(".teaseButton");
+
+        tease.addEventListener("mousemove", function(e){
+            const position = tease.getBoundingClientRect();
+
+            const x = e.pageX - position.left - position.width /2;
+            const y = e.pageY - position.top - position.height /2;
+
+            tease.style.transform = "translate(" + x *0.5 + "px," + y*0.5 + "px)";
         })
+
+        tease.addEventListener("mouseout", function(e){ 
+
+            tease.style.transform = "translate(0,0)";
+        }) 
 
         about.addEventListener("click",function(){
-            work.classList.remove("active-menu");
-            contact.classList.remove("active-menu");
+            work.classList.remove("active-menu"); 
             about.classList.add("active-menu");
+            if(window.screen.width < 1024){
+                setTimeout(function(){
+                    menu.classList.remove("slide");
+                    body.classList.toggle("stop-scrolling");
+                    document.getElementById("Rectangle_136").classList.toggle("r136");
+                    document.getElementById("Rectangle_137").classList.toggle("r137");
+                    document.getElementById("Rectangle_138").classList.toggle("r138");
+                },1000)
+            }
         })
 
         const logo = document.querySelector("#logo");
@@ -74,8 +101,8 @@ function NavBar() {
         <div className="home">
             <div className="navbar">
                 
-                <Link className="logoC" to="/">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="221.536" height="187.5" viewBox="0 0 221.536 187.5">
+                <Link aria-label="SC Logo" className="logoC" to="/">
+                    <svg style={{marginBottom:"-32px"}} xmlns="http://www.w3.org/2000/svg" width="221.536" height="187.5" viewBox="0 0 221.536 187.5">
                     <g id="logo" transform="translate(-4197.231 -4390.5)">
                         <g id="Subtraction_9" className="sub9" data-name="Subtraction 9" transform="translate(4197.595 4390.5)" fill="none">
                         <path d="M62.137,125A62.516,62.516,0,0,1,37.809,4.912a62.445,62.445,0,0,1,68.6,13.468L62.636,62.5l43.768,44.12A62.3,62.3,0,0,1,62.137,125Z" stroke="none"/>
@@ -106,14 +133,15 @@ function NavBar() {
 
 
                 <ul className="menu">
-                    <li><NavLink exact activeClassName="active-menu" className="menu-bg work" to="/">Work</NavLink></li>
-                    <li><a className="menu-bg resume" href = {pdf} target = "_blank" rel="noreferrer" >Resume</a></li>
-                    <li><NavLink exact activeClassName="active-menu" className="menu-bg contact" to="/contact">Contact</NavLink></li>
+                    <li><NavLink exact activeClassName="active-menu" className="menu-bg work" to="/">Home</NavLink></li>
+                    <li><a className="menu-bg resume" href = {`${CDN}/Sarath_Resume-min.pdf`} target = "_blank" rel="noreferrer" >Resume</a></li>
                     <li><NavLink exact activeClassName="active-menu" className="menu-bg about" to="/about">About Me</NavLink></li>
+                    {/* <li><NavLink exact activeClassName="active-menu" className="menu-bg resources" to="/resources">Resources</NavLink></li> */}
+                    <li className="contactButton teaseButton"><HashLink exact to="/home#contactPager">Contact</HashLink></li>
                 </ul>
             </div>
             
-            </div>
+        </div>
         
     );
 }

@@ -1,12 +1,11 @@
 import React,{useEffect} from 'react';
-import incog from '../icons/incog.svg';
-import flight from '../icons/flight.svg';
-import mypic from '../icons/mypic.png';
 import gsap from 'gsap';
 import MotionPathPlugin from 'gsap/MotionPathPlugin';
 import emailjs from 'emailjs-com';
-// import CursorFollower from '../components/cursorFollower';
 import {motion} from 'framer-motion';
+
+
+import { CDN } from '../config';
 
 function Contact(){
 
@@ -29,6 +28,7 @@ function Contact(){
                 document.querySelector(".nb4").classList.remove("borderBottom");
             },2500)
         });
+
         emailInputC.addEventListener("click", function(){
             document.querySelector(".eb1").classList.add("borderLeft");
             document.querySelector(".eb2").classList.add("borderTop");
@@ -41,6 +41,7 @@ function Contact(){
                 document.querySelector(".eb4").classList.remove("borderBottom");
             },2500)
         });
+        
         messageInputC.addEventListener("click", function(){
             document.querySelector(".mb1").classList.add("borderLeftm");
             document.querySelector(".mb2").classList.add("borderTop");
@@ -54,6 +55,7 @@ function Contact(){
             },2500)
         });
 
+        
     },[])
     
     gsap.registerPlugin(MotionPathPlugin);
@@ -90,8 +92,7 @@ function Contact(){
     };  
 
     function takeOff() {
-        if(window.screen.width > 780){
-            console.log("flighting")
+        if(window.screen.width > 780){ 
             gsap.to(".flight", {duration:2, ease:"Power0.easeOut",
             motionPath:flightPath
             });
@@ -130,15 +131,16 @@ function Contact(){
 
     return(
         <div>
+        
         <motion.div
         animate={{opacity:1,  translateY:"0px"}}
         initial={{opacity:0, translateY:"50px"}}
-        transition={{ duration: 1 }}
+        transition={{ duration: 1.5 }}
         exit={{opacity:0, translateY:"50px"}}>
         <div className="contact-page">
             <div className="incog">
-                <img className="incogImg" src={incog} alt="" />
-                <img className="mypic" src={mypic} alt="" />
+                <img className="incogImg" src={`${CDN}/icons/incog.svg`} alt="" />
+                <img className="mypic" src={`${CDN}/icons/mypic.png`} alt="" />
                 </div>
             <div className="reply-container">
                 <p>I've got your mail</p>
@@ -176,8 +178,8 @@ function Contact(){
                         <small style={{top:"110px"}}>Error Message</small>
                     </div>
 
-                    <button type="submit" value="Send" className="submitButton" >Submit </button>
-                    <img className="flight" src={flight} alt="" />
+                    <button type="submit" value="Send" className="submitButton" >Send </button>
+                    <img className="flight" src={`${CDN}/icons/flight.svg`} alt="" />
                     
                 </form>
             </div>
