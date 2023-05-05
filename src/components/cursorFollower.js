@@ -27,14 +27,17 @@
                 posY = e.clientY;
             })
 
-            const projects = document.querySelectorAll(".project");
+            const projects = document.querySelectorAll(".project-new-container");
+            const projects2 = document.querySelectorAll(".op");
             const resourceThumbnail =document.querySelector('.resource-thumbnail');
             const talk = document.querySelector(".talk");
             const caseSpan = document.querySelector(".case");
             const resourceSpan = document.querySelector(".resource-cursor");
             const hireSpan = document.querySelector(".hire");
 
-            projects.forEach( project =>{
+            const newProjects = [...projects, ...projects2];
+
+            newProjects.forEach( project =>{
                 project.addEventListener("mouseenter", function(){
                     cursorFollower.classList.add("active");
                     caseSpan.style.opacity = 1;

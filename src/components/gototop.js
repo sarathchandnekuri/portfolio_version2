@@ -21,7 +21,7 @@ function GoToTop(){
 
     return (
         <div id="goToTop" className="go-to-top">
-            <img src={`${CDN}/icons/gototop.svg`} alt="" />
+            <img style={{fill:'000'}} src={`${CDN}/icons/gototop+1.svg`} alt="" />
         </div>
 
     );

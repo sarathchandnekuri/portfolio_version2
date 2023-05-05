@@ -16,7 +16,7 @@ function Resources(){
         script.setAttribute('data-id', 'sarathnekuri');
         script.setAttribute('data-description', 'Support me on Buy me a coffee!');
         script.setAttribute('data-message', 'All the resources are free to use. Do you want to help supporting it?');
-        script.setAttribute('data-color',"#fce264")
+        script.setAttribute('data-color',"#F79064")
         script.setAttribute('data-position','right')
         script.setAttribute('data-x_margin','18')
         script.setAttribute('data-y-margin','18') 

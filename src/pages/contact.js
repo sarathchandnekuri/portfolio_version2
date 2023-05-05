@@ -4,7 +4,6 @@ import MotionPathPlugin from 'gsap/MotionPathPlugin';
 import emailjs from 'emailjs-com';
 import {motion} from 'framer-motion';
 
-
 import { CDN } from '../config';
 
 function Contact(){
@@ -139,8 +138,8 @@ function Contact(){
         exit={{opacity:0, translateY:"50px"}}>
         <div className="contact-page">
             <div className="incog">
-                <img className="incogImg" src={`${CDN}/icons/incog.svg`} alt="" />
-                <img className="mypic" src={`${CDN}/icons/mypic.png`} alt="" />
+                <img className="incogImg" src={`${CDN}/icons/incog+1.svg`} alt="" />
+                <img className="mypic" src={`${CDN}/images/Contact_ME.png`} alt="" />
                 </div>
             <div className="reply-container">
                 <p>I've got your mail</p>
@@ -179,7 +178,7 @@ function Contact(){
                     </div>
 
                     <button type="submit" value="Send" className="submitButton" >Send </button>
-                    <img className="flight" src={`${CDN}/icons/flight.svg`} alt="" />
+                    <img className="flight" src={`${CDN}/icons/flight+1.svg`} alt="" />
                     
                 </form>
             </div>
