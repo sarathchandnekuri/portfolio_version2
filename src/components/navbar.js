@@ -134,7 +134,7 @@ function NavBar() {
 
                 <ul className="menu">
                     <li><NavLink exact activeClassName="active-menu" className="menu-bg work" to="/">Home</NavLink></li>
-                    <li><a className="menu-bg resume" href = {`${CDN}/Sarath_Resume-min.pdf`} target = "_blank" rel="noreferrer" >Resume</a></li>
+                    <li><a className="menu-bg resume" href = {`${CDN}/Sarath_Resume.pdf`} target = "_blank" rel="noreferrer" >Resume</a></li>
                     <li><NavLink exact activeClassName="active-menu" className="menu-bg about" to="/about">About Me</NavLink></li>
                     {/* <li><NavLink exact activeClassName="active-menu" className="menu-bg resources" to="/resources">Resources</NavLink></li> */}
                     <li className="contactButton teaseButton"><HashLink exact to="/home#contactPager">Contact</HashLink></li>

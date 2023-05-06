@@ -1501,6 +1501,11 @@ Link {
   transition: 0.5s linear;
 }
 
+.contactButton a{  
+  color: var(--content-primary) !important;
+}
+
+
 button {
   z-index: 5;
   margin-top: 1rem;

@@ -10,7 +10,6 @@ import {motion} from 'framer-motion';
 // import ThreeCanvas from "../components/threeCanvas";
 import './contact';
 
-import covacMockup from '../images/Covac Mockup IP14.png'
 
 import { CDN } from '../config'; 
 import { HashLink } from "react-router-hash-link";
