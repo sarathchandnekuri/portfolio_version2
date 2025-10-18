@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+  opacity: 0;
+  animation: fadeIn 1.5s forwards;
+  font-family: "Lexend", sans-serif;
+  scroll-behavior: smooth;
+}
+
+img {
+  max-width: 120px;
+  margin-bottom: 16px;
+}
+
+h1 {
+  margin: 80px 0 24px 0;
+  font-size: 40px;
+}
+
+h2 {
+  margin: 80px 0 24px 0;
+  font-size: 32px;
+}
+
+h3 {
+  margin: 80px 0 24px 0;
+  font-size: 26px;
+}
+
+p,
+li {
+  line-height: 200%;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+ul,
+ol {
+  margin-left: 20px;
+}
+
+.faq {
+  margin-top: 20px;
+  border: 2px solid #e5efff;
+  background: #e5efff;
+  border-radius: 20px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+}
+
+.faq-section {
+  margin-top: 20px;
+}
+.faq-item {
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-radius: 32px;
+  background: #e5efff80;
+  border: 2px solid #e5efff80;
+  transition: all 0.3s ease;
+}
+.faq-item:hover {
+  border: 2px solid #007bff;
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  padding: 24px 24px 0px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  margin: 0;
+}
+.faq-answer {
+  padding: 0px 24px 24px 24px;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
